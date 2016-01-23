@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.Data", "MasterChef.Data\MasterChef.Data.csproj", "{E60F9E66-D726-4881-B1F5-C9D61A4429E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.Models", "MasterChef.Models\MasterChef.Models.csproj", "{54F131C0-2A3F-4C8B-9AD3-5789E78750DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.Web", "MasterChef.Web\MasterChef.Web.csproj", "{656F7427-9E20-4819-AB4E-B8C4E070E236}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E60F9E66-D726-4881-B1F5-C9D61A4429E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60F9E66-D726-4881-B1F5-C9D61A4429E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60F9E66-D726-4881-B1F5-C9D61A4429E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60F9E66-D726-4881-B1F5-C9D61A4429E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F131C0-2A3F-4C8B-9AD3-5789E78750DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F131C0-2A3F-4C8B-9AD3-5789E78750DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F131C0-2A3F-4C8B-9AD3-5789E78750DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F131C0-2A3F-4C8B-9AD3-5789E78750DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656F7427-9E20-4819-AB4E-B8C4E070E236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656F7427-9E20-4819-AB4E-B8C4E070E236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656F7427-9E20-4819-AB4E-B8C4E070E236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656F7427-9E20-4819-AB4E-B8C4E070E236}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
