@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Optimization;
-using System.Web.Routing;
-using System.Web.Security;
-using System.Web.SessionState;
-
-namespace MasterChef.Web
+﻿namespace MasterChef.Web
 {
+    using System;
+    using System.Web;
+    using System.Web.Optimization;
+    using System.Web.Routing;
+
     public class Global : HttpApplication
     {
         public const string APPLICATION_ERROR = "TheLastException";
@@ -16,6 +12,7 @@ namespace MasterChef.Web
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
+            DatabaseConfig.Initialize();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

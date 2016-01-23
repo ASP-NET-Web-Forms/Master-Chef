@@ -1,35 +1,9 @@
-﻿using System;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using MasterChef.Models;
-
-namespace MasterChef.Web.Models
+﻿namespace MasterChef.Web
 {
-    // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
-    
+    using System;
 
-    public class ApplicationDbContext : IdentityDbContext<AppUser>
-    {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
-        {
-        }
+    using System.Web;
 
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
-    }
-}
-
-#region Helpers
-namespace MasterChef.Web
-{
     public static class IdentityHelper
     {
         // Used for XSRF when linking external logins
@@ -83,4 +57,3 @@ namespace MasterChef.Web
         }
     }
 }
-#endregion
