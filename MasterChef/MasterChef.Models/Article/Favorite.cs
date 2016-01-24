@@ -13,7 +13,5 @@
         public int ArticleID { get; set; }
 
         public virtual Article Article { get; set; }
-
-        public int Test { get; set; }
     }
 }
