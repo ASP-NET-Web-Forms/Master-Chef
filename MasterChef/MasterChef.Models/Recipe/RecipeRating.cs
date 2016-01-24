@@ -1,8 +1,8 @@
-﻿namespace MasterChef.Models
+﻿namespace MasterChef.Models.Recipe
 {
     using System;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
+    using AppUser;
 
     public class RecipeRating
     {
@@ -15,8 +15,6 @@
         [Required]
         public int Rating { get; set; }
 
-        [Required]
-        [ForeignKey("User")]
         public string UserID { get; set; }
 
         public virtual AppUser User { get; set; }

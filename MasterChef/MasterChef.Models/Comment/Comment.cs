@@ -1,19 +1,19 @@
-﻿namespace MasterChef.Models
+﻿namespace MasterChef.Models.Comment
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using AppUser;
+    using Article;
+    using Common.Constants;
 
     public class Comment
     {
         public int ID { get; set; }
 
         [Required]
-        [StringLength(250)]
+        [MinLength(ModelConstants.CommentContentMinLength)]
+        [MaxLength(ModelConstants.CommentContentMaxLength)]
         public string Content { get; set; }
 
         [Required]
@@ -26,6 +26,7 @@
         public virtual AppUser Creator { get; set; }
 
         [Required]
+        [ForeignKey("Article")]
         public int ArticleID { get; set; }
 
         public virtual Article Article { get; set; }

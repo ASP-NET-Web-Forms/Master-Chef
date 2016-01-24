@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using MasterChef.Models;
+using MasterChef.Models.AppUser;
 
 namespace MasterChef.Web.Account
 {

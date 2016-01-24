@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MasterChef.Models;
+using MasterChef.Models.Article;
+using MasterChef.Models.Comment;
+using MasterChef.Models.Country;
+using MasterChef.Models.Image;
+using MasterChef.Models.Ingredient;
+using MasterChef.Models.Recipe;
+using MasterChef.Models.AppUser;
 
 namespace MasterChef.Data
 {
@@ -23,6 +30,14 @@ namespace MasterChef.Data
             get
             {
                 return this.GetRepository<Article>();
+            }
+        }
+
+        public IRepository<ArticleLike> ArticleLikes
+        {
+            get
+            {
+                return this.GetRepository<ArticleLike>();
             }
         }
 
@@ -58,19 +73,27 @@ namespace MasterChef.Data
             }
         }
 
-        public IRepository<RecipeRating> RecepieRatings
-        {
-            get
-            {
-                return this.GetRepository<RecipeRating>();
-            }
-        }
-
         public IRepository<Recipe> Recipes
         {
             get
             {
                 return this.GetRepository<Recipe>();
+            }
+        }
+
+        public IRepository<RecipeLike> RecipeLikes
+        {
+            get
+            {
+                return this.GetRepository<RecipeLike>();
+            }
+        }
+
+        public IRepository<RecipeRating> RecipeRatings
+        {
+            get
+            {
+                return this.GetRepository<RecipeRating>();
             }
         }
 
