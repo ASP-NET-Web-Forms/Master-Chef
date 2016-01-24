@@ -210,6 +210,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\countries.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -422,7 +423,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
-    <Folder Include="App_Data\" />
     <Folder Include="Controls\" />
     <Folder Include="Uploaded_Files\" />
     <Folder Include="User\" />
