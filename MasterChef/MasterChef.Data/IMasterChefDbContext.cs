@@ -14,6 +14,7 @@
     public interface IMasterChefDbContext : IDisposable
     {
         IDbSet<Article> Articles { get; set; }
+        IDbSet<Favorite> Favorite { get; set; }
         IDbSet<ArticleLike> ArticleLikes { get; set; }
 
         IDbSet<Recipe> Recipes { get; set; }

@@ -1,6 +1,5 @@
 ﻿namespace MasterChef.Data
 {
-    using MasterChef.Models;
     using Models.AppUser;
     using Models.Article;
     using Models.Comment;
@@ -8,9 +7,11 @@
     using Models.Image;
     using Models.Ingredient;
     using Models.Recipe;
+
     public interface IMasterChefData
     {
         IRepository<Article> Articles { get; }
+        IRepository<Favorite> Favorite { get; }
         IRepository<ArticleLike> ArticleLikes { get; }
 
         IRepository<Recipe> Recipes { get; }

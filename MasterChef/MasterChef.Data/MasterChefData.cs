@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MasterChef.Models;
-using MasterChef.Models.Article;
-using MasterChef.Models.Comment;
-using MasterChef.Models.Country;
-using MasterChef.Models.Image;
-using MasterChef.Models.Ingredient;
-using MasterChef.Models.Recipe;
-using MasterChef.Models.AppUser;
-
-namespace MasterChef.Data
+﻿namespace MasterChef.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using MasterChef.Models.Article;
+    using MasterChef.Models.Comment;
+    using MasterChef.Models.Country;
+    using MasterChef.Models.Image;
+    using MasterChef.Models.Ingredient;
+    using MasterChef.Models.Recipe;
+    using MasterChef.Models.AppUser;
+
     public class MasterChefData : IMasterChefData
     {
         private IMasterChefDbContext context;
@@ -30,6 +26,14 @@ namespace MasterChef.Data
             get
             {
                 return this.GetRepository<Article>();
+            }
+        }
+
+        public IRepository<Favorite> Favorite
+        {
+            get
+            {
+                return this.GetRepository<Favorite>();
             }
         }
 

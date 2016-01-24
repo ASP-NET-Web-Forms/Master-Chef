@@ -13,11 +13,13 @@
     {
         private ICollection<Comment> comments;
         private ICollection<ArticleLike> likes;
+        private ICollection<Favorite> favoriteUsers;
 
         public Article()
         {
             this.comments = new HashSet<Comment>();
             this.likes = new HashSet<ArticleLike>();
+            this.favoriteUsers = new HashSet<Favorite>();
         }
 
         public int ID { get; set; }
@@ -33,17 +35,19 @@
         [Required]
         public DateTime CreatedOn { get; set; }
 
-        [Required]
-        [ForeignKey("Creator")]
         public string CreatorID { get; set; }
-
+        
         public virtual AppUser Creator { get; set; }
 
-        [Required]
-        [ForeignKey("Image")]
         public int ImageID { get; set; }
 
         public virtual Image Image { get; set; }
+
+        public virtual ICollection<Favorite> FavoriteUsers
+        {
+            get { return this.favoriteUsers; }
+            set { this.favoriteUsers = value; }
+        }
 
         public virtual ICollection<Comment> Comments
         {

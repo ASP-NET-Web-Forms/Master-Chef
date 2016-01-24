@@ -88,6 +88,7 @@
     <Compile Include="AppUser\AppUser.cs" />
     <Compile Include="Article\Article.cs" />
     <Compile Include="Article\ArticleLike.cs" />
+    <Compile Include="Article\Favorite.cs" />
     <Compile Include="Comment\Comment.cs" />
     <Compile Include="Country\Country.cs" />
     <Compile Include="Image\Image.cs" />

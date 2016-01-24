@@ -21,6 +21,8 @@
 
         public virtual IDbSet<ArticleLike> ArticleLikes { get; set; }
 
+        public virtual IDbSet<Favorite> Favorite { get; set; }
+
         public virtual IDbSet<Comment> Comments { get; set; }
 
         public virtual IDbSet<Country> Countries { get; set; }
@@ -57,23 +59,20 @@
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<AppUser>()
-               .HasMany(e => e.Comments)
-               .WithRequired(e => e.Creator)
-               .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<AppUser>()
+            //   .HasMany(e => e.Comments)
+            //   .WithRequired(e => e.Creator)
+            //   .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Image>()
                 .HasMany(e => e.Users)
                 .WithRequired(e => e.Image)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Recipe>()
-                .HasMany(e => e.Ratings)
-                .WithRequired(e => e.Recipe)
-                .WillCascadeOnDelete(false);
-
-
-
+            //modelBuilder.Entity<Recipe>()
+            //    .HasMany(e => e.Ratings)
+            //    .WithRequired(e => e.Recipe)
+            //    .WillCascadeOnDelete(false);
         }
     }
 }

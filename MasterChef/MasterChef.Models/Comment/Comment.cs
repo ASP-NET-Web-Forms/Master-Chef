@@ -18,15 +18,11 @@
 
         [Required]
         public DateTime CreatedOn { get; set; }
-
-        [Required]
-        [ForeignKey("Creator")]
+        
         public string CreatorID { get; set; }
-
+        
         public virtual AppUser Creator { get; set; }
-
-        [Required]
-        [ForeignKey("Article")]
+        
         public int ArticleID { get; set; }
 
         public virtual Article Article { get; set; }

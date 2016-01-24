@@ -2,16 +2,18 @@
 {
     using AppUser;
 
-    public class ArticleLike
+    public class Favorite
     {
         public int ID { get; set; }
-        
+
         public string UserID { get; set; }
-        
+
         public virtual AppUser User { get; set; }
 
         public int ArticleID { get; set; }
-        
+
         public virtual Article Article { get; set; }
+
+        public int Test { get; set; }
     }
 }
