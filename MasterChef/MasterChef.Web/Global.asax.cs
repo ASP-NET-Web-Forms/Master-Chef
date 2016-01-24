@@ -13,6 +13,7 @@
         {
             // Code that runs on application startup
             DatabaseConfig.Initialize();
+
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
