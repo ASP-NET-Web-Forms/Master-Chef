@@ -1,13 +1,13 @@
-﻿using System;
-using Microsoft.AspNet.Identity;
-namespace MasterChef.Web
+﻿namespace MasterChef.Web
 {
+    using System;
+    using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin;
     using Microsoft.Owin.Security.Cookies;
     using Owin;
-    using MasterChef.Models;
     using MasterChef.Data;
+    using Models.AppUser;
 
     public partial class Startup {
 

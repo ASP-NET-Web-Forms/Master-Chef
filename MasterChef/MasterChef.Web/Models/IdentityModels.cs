@@ -1,24 +1,13 @@
 ﻿namespace MasterChef.Web
 {
     using System;
-    using System.Web;
 
-    using Microsoft.AspNet.Identity;
-    using Microsoft.Owin.Security;
-    using Models;
+    using System.Web;
 
     public static class IdentityHelper
     {
         // Used for XSRF when linking external logins
         public const string XsrfKey = "XsrfId";
-
-        public static void SignIn(ApplicationUserManager manager, AppUser user, bool isPersistent)
-        {
-            IAuthenticationManager authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-            authenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
-            var identity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
-            authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, identity);
-        }
 
         public const string ProviderNameKey = "providerName";
         public static string GetProviderNameFromRequest(HttpRequest request)

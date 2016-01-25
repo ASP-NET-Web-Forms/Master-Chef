@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MasterChef.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
-
-namespace MasterChef.Data
+﻿namespace MasterChef.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using MasterChef.Models.Article;
+    using MasterChef.Models.Comment;
+    using MasterChef.Models.Country;
+    using MasterChef.Models.Image;
+    using MasterChef.Models.Ingredient;
+    using MasterChef.Models.Recipe;
+    using MasterChef.Models.AppUser;
+
     public class MasterChefData : IMasterChefData
     {
         private IMasterChefDbContext context;
@@ -24,6 +26,22 @@ namespace MasterChef.Data
             get
             {
                 return this.GetRepository<Article>();
+            }
+        }
+
+        public IRepository<Favorite> Favorite
+        {
+            get
+            {
+                return this.GetRepository<Favorite>();
+            }
+        }
+
+        public IRepository<ArticleLike> ArticleLikes
+        {
+            get
+            {
+                return this.GetRepository<ArticleLike>();
             }
         }
 
@@ -59,14 +77,6 @@ namespace MasterChef.Data
             }
         }
 
-        public IRepository<RecipeRating> RecepieRatings
-        {
-            get
-            {
-                return this.GetRepository<RecipeRating>();
-            }
-        }
-
         public IRepository<Recipe> Recipes
         {
             get
@@ -75,11 +85,19 @@ namespace MasterChef.Data
             }
         }
 
-        public IRepository<IdentityRole> Roles
+        public IRepository<RecipeLike> RecipeLikes
         {
             get
             {
-                return this.GetRepository<IdentityRole>();
+                return this.GetRepository<RecipeLike>();
+            }
+        }
+
+        public IRepository<RecipeRating> RecipeRatings
+        {
+            get
+            {
+                return this.GetRepository<RecipeRating>();
             }
         }
 

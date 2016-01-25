@@ -1,10 +1,10 @@
-﻿namespace MasterChef.Web.Account
-{
-    using System;
-    using System.Web;
-    using System.Web.UI;
-    using Microsoft.AspNet.Identity.Owin;
+﻿using System;
+using System.Web;
+using System.Web.UI;
+using Microsoft.AspNet.Identity.Owin;
 
+namespace MasterChef.Web.Account
+{
     public partial class Login : Page
     {
         protected void Page_Load(object sender, EventArgs e)

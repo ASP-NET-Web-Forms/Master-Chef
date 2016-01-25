@@ -1,13 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Web;
-using System.Web.UI.WebControls;
-using MasterChef.Models;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-
-namespace MasterChef.Web.Account
+﻿namespace MasterChef.Web.Account
 {
+    using System;
+    using System.Linq;
+    using System.Web;
+    using System.Web.UI.WebControls;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.Owin;
+    using MasterChef.Models.AppUser;
+
     public partial class TwoFactorAuthenticationSignIn : System.Web.UI.Page
     {
         private ApplicationSignInManager signinManager;
