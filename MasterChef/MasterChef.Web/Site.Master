@@ -5,7 +5,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %>・MasterChef</title>
+    <title><%: Page.Title %> • MasterChef</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -94,7 +94,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p class="text-center">&copy; <%: DateTime.Now.Year %> <a href="https://github.com/ASP-NET-Web-Forms/Master-Chef">MasterChef</a>・TelerikAcademy Team 'Mobile Invasion'</p>
+                <p class="text-center">&copy; <%: DateTime.Now.Year %> <a href="https://github.com/ASP-NET-Web-Forms/Master-Chef">MasterChef</a> • TelerikAcademy Team 'Mobile Invasion'</p>
             </footer>
         </div>
     </form>
