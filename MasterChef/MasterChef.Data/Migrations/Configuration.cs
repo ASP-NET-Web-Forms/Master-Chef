@@ -62,7 +62,7 @@ namespace MasterChef.Data.Migrations
             {
                 context.Countries.Add(country);
             }
-
+            
             // Users
             var countryBulgaria = context.Countries.Local.Single(item => item.Name == "Bulgaria");
             var userAdmin = new AppUser
@@ -74,6 +74,8 @@ namespace MasterChef.Data.Migrations
                 Country = countryBulgaria,
                 Image = adminImage
             };
+
+
             userManager.Create(userAdmin, userAdmin.UserName);
             userManager.AddToRole(userAdmin.Id, adminRole);
 

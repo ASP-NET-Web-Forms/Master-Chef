@@ -13,8 +13,8 @@
         public const int CommentContentMinLength = 2;
         public const int CommentContentMaxLength = 200;
 
-        public const int CountryNameMinLength = 2;
-        public const int CountryNameMaxLength = 30;
+        public const int CountryNameMinLength = 1;
+        public const int CountryNameMaxLength = 100;
 
         public const int IngredientNameMinLength = 3;
         public const int IngredientNameMaxLength = 30;
