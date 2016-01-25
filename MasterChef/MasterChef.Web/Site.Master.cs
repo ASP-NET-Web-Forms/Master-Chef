@@ -76,6 +76,8 @@
 
             if (Context.User.Identity.IsAuthenticated)
             {
+                adminpanel.Visible = false;
+
                 var user = this.data.Users
                     .All()
                     .Where(u => u.UserName == this.Context.User.Identity.Name)
@@ -88,7 +90,7 @@
 
                 if (user.Roles.Any(r => r.RoleId == adminRole.Id))
                 {
-                    // TODO: show admin nav bar
+                    adminpanel.Visible = true;
                 }
 
                 (LoginView.FindControl("ProfileImage") as Image).ImageUrl = user.Image.Path;
@@ -100,6 +102,7 @@
                 AddRecipePrivateItemMenu.Visible = false;
                 FavouriteArticlesPrivateItemMenu.Visible = false;
                 MyRecipesPrivateItemMenu.Visible = false;
+                adminpanel.Visible = false;
             }
         }
 

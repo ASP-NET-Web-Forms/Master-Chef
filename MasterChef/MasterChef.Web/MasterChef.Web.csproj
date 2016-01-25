@@ -175,6 +175,11 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\ArticlesGrid.aspx" />
+    <Content Include="Admin\CountriesGrid.aspx" />
+    <Content Include="Admin\ImagesGrid.aspx" />
+    <Content Include="Admin\RecipesGrid.aspx" />
+    <Content Include="Admin\UsersGrid.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -454,6 +459,41 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ArticlesGrid.aspx.cs">
+      <DependentUpon>ArticlesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ArticlesGrid.aspx.designer.cs">
+      <DependentUpon>ArticlesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CountriesGrid.aspx.cs">
+      <DependentUpon>CountriesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CountriesGrid.aspx.designer.cs">
+      <DependentUpon>CountriesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ImagesGrid.aspx.cs">
+      <DependentUpon>ImagesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ImagesGrid.aspx.designer.cs">
+      <DependentUpon>ImagesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RecipesGrid.aspx.cs">
+      <DependentUpon>RecipesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RecipesGrid.aspx.designer.cs">
+      <DependentUpon>RecipesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UsersGrid.aspx.cs">
+      <DependentUpon>UsersGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UsersGrid.aspx.designer.cs">
+      <DependentUpon>UsersGrid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -523,7 +563,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="Uploaded_Files\Articles\" />
     <Folder Include="Uploaded_Files\Recipes\" />
   </ItemGroup>
