@@ -1,18 +1,18 @@
 namespace MasterChef.Data.Migrations
 {
-    using FakeData;
-    using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.EntityFramework;
-    using Models;
-    using Models.AppUser;
-    using Models.Country;
-    using Models.Image;
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity.Migrations;
     using System.IO;
     using System.Linq;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Newtonsoft.Json;
+    using FakeData;
+    using Models.AppUser;
+    using Models.Country;
+    using Models.Image;
+
 
     public sealed class Configuration : DbMigrationsConfiguration<MasterChefDbContext>
     {
