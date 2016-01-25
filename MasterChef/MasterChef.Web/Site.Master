@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MasterChef.Web.SiteMaster" %>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -77,6 +76,9 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+            <hr />
+            <%@ register assembly="GMaps" namespace="Subgurim.Controles" tagprefix="cc1" %>
+            <cc1:GMap ID="GMap1" runat="server" Width="100%" Height="350px" enableHookMouseWheelToZoom="true" mapType="Hybrid"/>
             <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
