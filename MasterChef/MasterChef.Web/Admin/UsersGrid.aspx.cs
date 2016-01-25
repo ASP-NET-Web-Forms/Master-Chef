@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using MasterChef.Web.User;
+using System;
+
 
 namespace MasterChef.Web.Admin
 {
-    public partial class UsersGrid : System.Web.UI.Page
+    public partial class UsersGrid : BaseAdminPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
