@@ -12,7 +12,7 @@ namespace MasterChef.Data.Migrations
     using Models.AppUser;
     using Models.Country;
     using Models.Image;
-
+    using Models.Ingredient;
 
     public sealed class Configuration : DbMigrationsConfiguration<MasterChefDbContext>
     {
@@ -61,6 +61,15 @@ namespace MasterChef.Data.Migrations
             foreach (var country in countries)
             {
                 context.Countries.Add(country);
+            }
+
+            //Ingredients
+            var jsonIngredients = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\App_Data\ingredients.json");
+            var ingredients = JsonConvert.DeserializeObject<IEnumerable<Ingredient>>(jsonIngredients);
+
+            foreach (var ingredient in ingredients)
+            {
+                context.Ingredients.Add(ingredient);
             }
             
             // Users

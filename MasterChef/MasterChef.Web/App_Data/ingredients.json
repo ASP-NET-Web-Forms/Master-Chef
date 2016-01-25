@@ -1,0 +1,56 @@
+[
+    {
+        "name": "French dressing",
+        "quantity": "100",
+		"measurement": "10 g",
+		"createdOn" : "2009-07-14T19:43:37+0100"
+    },
+    {
+        "name": "Wasabi",
+        "quantity": "50",
+		"measurement": "10 g",
+		"createdOn" : "2008-07-14T19:43:37+0100"
+    },
+    {
+        "name": "Salt",
+        "quantity": "40",
+		"measurement": "10 g",
+		"createdOn" : "2007-07-14T19:43:37+0100"
+    },
+    {
+        "name": "Ketchup",
+        "quantity": "27",
+		"measurement": "30 g",
+		"createdOn" : "2011-07-14T19:43:37+0100"
+    },
+    {
+        "name": "Mustard",
+        "quantity": "74",
+		"measurement": "40 g",
+		"createdOn" : "2010-07-14T19:43:37+0100"
+    },
+    {
+        "name": "Walnut Oil",
+        "quantity": "12",
+		"measurement": "16 g",
+		"createdOn" : "2015-07-14T19:43:37+0100"
+    },
+    {
+        "name": "Whelk",
+        "quantity": "35",
+		"measurement": "10 g",
+		"createdOn" : "2014-07-14T19:43:37+0100"
+    },
+    {
+        "name": "Whipping Cream",
+        "quantity": "67",
+		"measurement": "40 g",
+		"createdOn" : "2013-07-14T19:43:37+0100"
+    },
+    {
+        "name": "White Pepper",
+        "quantity": "3",
+		"measurement": "50 g",
+		"createdOn" : "2012-07-14T19:43:37+0100"
+    },
+]
