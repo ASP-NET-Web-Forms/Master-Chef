@@ -82,7 +82,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p class="text-center">&copy; <%: DateTime.Now.Year %>・<a href="https://github.com/ASP-NET-Web-Forms/Master-Chef">MasterChef</a></p>
             </footer>
         </div>
     </form>
