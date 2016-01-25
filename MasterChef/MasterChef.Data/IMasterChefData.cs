@@ -1,6 +1,7 @@
 ﻿namespace MasterChef.Data
 {
     using MasterChef.Models;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     public interface IMasterChefData
     {
@@ -19,6 +20,8 @@
         IRepository<Image> Images { get; }
 
         IRepository<AppUser> Users { get; }
+
+        IRepository<IdentityRole> Roles { get; }
 
         int SaveChanges();
     }

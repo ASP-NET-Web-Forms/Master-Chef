@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MasterChef.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace MasterChef.Data
 {
@@ -71,6 +72,14 @@ namespace MasterChef.Data
             get
             {
                 return this.GetRepository<Recipe>();
+            }
+        }
+
+        public IRepository<IdentityRole> Roles
+        {
+            get
+            {
+                return this.GetRepository<IdentityRole>();
             }
         }
 
