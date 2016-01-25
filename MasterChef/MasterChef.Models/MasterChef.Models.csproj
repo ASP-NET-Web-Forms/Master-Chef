@@ -93,6 +93,7 @@
     <Compile Include="Country\Country.cs" />
     <Compile Include="Image\Image.cs" />
     <Compile Include="Ingredient\Ingredient.cs" />
+    <Compile Include="Ingredient\IngredientName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe\Recipe.cs" />
     <Compile Include="Recipe\RecipeLike.cs" />

@@ -78,6 +78,14 @@
             }
         }
 
+        public IRepository<IngredientName> IngredientNames
+        {
+            get
+            {
+                return this.GetRepository<IngredientName>();
+            }
+        }
+
         public IRepository<Recipe> Recipes
         {
             get

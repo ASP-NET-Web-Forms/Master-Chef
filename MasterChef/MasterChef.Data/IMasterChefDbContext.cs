@@ -22,6 +22,7 @@
         IDbSet<RecipeRating> RecipeRatings { get; set; }
 
         IDbSet<Ingredient> Ingredients { get; set; }
+        IDbSet<IngredientName> IngredientNames { get; set; }
 
         IDbSet<Comment> Comments { get; set; }
 

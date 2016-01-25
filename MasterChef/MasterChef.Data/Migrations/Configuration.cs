@@ -63,13 +63,13 @@ namespace MasterChef.Data.Migrations
                 context.Countries.Add(country);
             }
 
-            //Ingredients
-            var jsonIngredients = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\App_Data\ingredients.json");
-            var ingredients = JsonConvert.DeserializeObject<IEnumerable<Ingredient>>(jsonIngredients);
+            //Ingredient Names
+            var jsonIngredientNames = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\App_Data\ingredients.json");
+            var ingredientNames = JsonConvert.DeserializeObject<IEnumerable<IngredientName>>(jsonIngredientNames);
 
-            foreach (var ingredient in ingredients)
+            foreach (var name in ingredientNames)
             {
-                context.Ingredients.Add(ingredient);
+                context.IngredientNames.Add(name);
             }
             
             // Users

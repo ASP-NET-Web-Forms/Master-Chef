@@ -31,6 +31,8 @@
 
         public virtual IDbSet<Ingredient> Ingredients { get; set; }
 
+        public virtual IDbSet<IngredientName> IngredientNames { get; set; }
+
         public virtual IDbSet<Recipe> Recipes { get; set; }
 
         public virtual IDbSet<RecipeLike> RecipeLikes { get; set; }

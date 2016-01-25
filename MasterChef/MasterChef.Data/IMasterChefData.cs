@@ -21,6 +21,7 @@
         IRepository<RecipeRating> RecipeRatings { get; }
 
         IRepository<Ingredient> Ingredients { get; }
+        IRepository<IngredientName> IngredientNames { get; }
 
         IRepository<Comment> Comments { get; }
 
