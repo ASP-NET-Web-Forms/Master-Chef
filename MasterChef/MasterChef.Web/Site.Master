@@ -13,7 +13,7 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <webopt:BundleReference runat="server" Path="~/Content/theme" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/MasterChefSiteLogo.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
 <body>
@@ -47,13 +47,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
                     <a class="navbar-brand" runat="server" href="~/">Master Chef</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-list-alt" /> Articles <span class="caret"/></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Articles/Browse">Browse Articles</a></li>
+                                <li><a runat="server" href="~/Articles/Favorite">Favorite Articles</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-cutlery" /> Recipes <span class="caret"/></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Recipes/Browse">Browse Recipes</a></li>
+                                <li><a runat="server" href="~/Recipes/Add">Add Recipe</a></li>
+                                <li><a runat="server" href="~/Recipes/MyRecipes">My Recipes</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <asp:LoginView ID="LoginView" runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

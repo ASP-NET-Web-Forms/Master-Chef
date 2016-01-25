@@ -43,3 +43,7 @@ input[type="select"] {
     height: 60px;
     margin-top: 3%;
 }
+
+.nav-buttons-clickable-anchor {
+    cursor: pointer;
+}
