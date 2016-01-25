@@ -14,6 +14,7 @@
     public interface IMasterChefDbContext : IDisposable
     {
         IDbSet<Article> Articles { get; set; }
+        IDbSet<Favorite> Favorite { get; set; }
         IDbSet<ArticleLike> ArticleLikes { get; set; }
 
         IDbSet<Recipe> Recipes { get; set; }
@@ -21,6 +22,7 @@
         IDbSet<RecipeRating> RecipeRatings { get; set; }
 
         IDbSet<Ingredient> Ingredients { get; set; }
+        IDbSet<IngredientName> IngredientNames { get; set; }
 
         IDbSet<Comment> Comments { get; set; }
 

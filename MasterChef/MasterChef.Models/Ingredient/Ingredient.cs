@@ -17,10 +17,9 @@
 
         public int ID { get; set; }
 
-        [Required]
-        [MinLength(ModelConstants.IngredientNameMinLength)]
-        [MaxLength(ModelConstants.IngredientNameMaxLength)]
-        public string Name { get; set; }
+        public int NameID { get; set; }
+
+        public virtual IngredientName Name { get; set; }
 
         [Required]
         [Range(ModelConstants.IngredientQuantityMinValue, ModelConstants.IngredientQuantityMaxValue)]

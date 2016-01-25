@@ -28,23 +28,20 @@
         [MinLength(ModelConstants.RecipeNameMinLength)]
         [MaxLength(ModelConstants.RecipeNameMaxLength)]
         public string Name { get; set; }
-        
+
         [MinLength(ModelConstants.RecipeDescriptionMinLength)]
         [MaxLength(ModelConstants.RecipeDescriptionMaxLength)]
         public string Description { get; set; }
-     
+
         [Required]
         public DateTime CreatedOn { get; set; }
-
-        [Required]
-        [ForeignKey("Creator")]
+        
         public string CreatorID { get; set; }
-
+        
         public virtual AppUser Creator { get; set; }
 
-        [ForeignKey("Image")]
         public int ImageID { get; set; }
-
+        
         public virtual Image Image { get; set; }
 
         public bool isCold { get; set; }

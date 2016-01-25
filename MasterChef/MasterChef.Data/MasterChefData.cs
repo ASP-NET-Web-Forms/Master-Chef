@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MasterChef.Models;
-using MasterChef.Models.Article;
-using MasterChef.Models.Comment;
-using MasterChef.Models.Country;
-using MasterChef.Models.Image;
-using MasterChef.Models.Ingredient;
-using MasterChef.Models.Recipe;
-using MasterChef.Models.AppUser;
-
-namespace MasterChef.Data
+﻿namespace MasterChef.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using MasterChef.Models.Article;
+    using MasterChef.Models.Comment;
+    using MasterChef.Models.Country;
+    using MasterChef.Models.Image;
+    using MasterChef.Models.Ingredient;
+    using MasterChef.Models.Recipe;
+    using MasterChef.Models.AppUser;
+    using Microsoft.AspNet.Identity.EntityFramework;
+
     public class MasterChefData : IMasterChefData
     {
         private IMasterChefDbContext context;
@@ -30,6 +27,14 @@ namespace MasterChef.Data
             get
             {
                 return this.GetRepository<Article>();
+            }
+        }
+
+        public IRepository<Favorite> Favorite
+        {
+            get
+            {
+                return this.GetRepository<Favorite>();
             }
         }
 
@@ -73,6 +78,14 @@ namespace MasterChef.Data
             }
         }
 
+        public IRepository<IngredientName> IngredientNames
+        {
+            get
+            {
+                return this.GetRepository<IngredientName>();
+            }
+        }
+
         public IRepository<Recipe> Recipes
         {
             get
@@ -94,6 +107,14 @@ namespace MasterChef.Data
             get
             {
                 return this.GetRepository<RecipeRating>();
+            }
+        }
+
+        public IRepository<IdentityRole> Roles
+        {
+            get
+            {
+                return this.GetRepository<IdentityRole>();
             }
         }
 

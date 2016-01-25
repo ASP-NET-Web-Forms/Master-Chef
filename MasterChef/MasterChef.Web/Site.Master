@@ -12,7 +12,7 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <webopt:BundleReference runat="server" Path="~/Content/theme" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/MasterChefSiteLogo.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
 <body>
@@ -46,15 +46,28 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
                     <a class="navbar-brand" runat="server" href="~/">Master Chef</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-list-alt" /> Articles <span class="caret"/></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Articles/Browse">Browse Articles</a></li>
+                                <li><a runat="server" ID="FavouriteArticlesPrivateItemMenu" href="~/Articles/Favorite">Favorite Articles</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-cutlery" /> Recipes <span class="caret"/></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Recipes/Browse">Browse Recipes</a></li>
+                                <li><a runat="server" ID="AddRecipePrivateItemMenu" href="~/Recipes/Add">Add Recipe</a></li>
+                                <li><a runat="server" ID="MyRecipesPrivateItemMenu" href="~/Recipes/MyRecipes">My Recipes</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                    <asp:LoginView ID="LoginView" runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
@@ -63,6 +76,9 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <asp:Image ID="ProfileImage" runat="server" ImageUrl=currentUserProfileImage AlternateText="Profile Image" CssClass="img-circle centered-profile-image"/>
+                                </li>
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
@@ -78,7 +94,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p class="text-center">&copy; <%: DateTime.Now.Year %> <a href="https://github.com/ASP-NET-Web-Forms/Master-Chef">MasterChef</a>・TelerikAcademy Team 'Mobile Invasion'</p>
             </footer>
         </div>
     </form>

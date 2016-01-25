@@ -4,7 +4,6 @@
     using Microsoft.AspNet.Identity.EntityFramework;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
     using System.Security.Claims;
     using System.Threading.Tasks;
     using Comment;
@@ -13,12 +12,11 @@
     using Country;
     using Image;
     using Common.Constants;
-
     public class AppUser : IdentityUser
     {
         private ICollection<Comment> comments;
         private ICollection<Article> createdArticles;
-        private ICollection<Article> favoriteArticles;
+        private ICollection<Favorite> favoriteArticles;
         private ICollection<ArticleLike> articleLikes;
         private ICollection<Recipe> recipes;
         private ICollection<RecipeLike> recipeLikes;
@@ -28,7 +26,7 @@
         {
             this.comments = new HashSet<Comment>();
             this.createdArticles = new HashSet<Article>();
-            this.favoriteArticles = new HashSet<Article>();
+            this.favoriteArticles = new HashSet<Favorite>();
             this.articleLikes = new HashSet<ArticleLike>();
             this.recipes = new HashSet<Recipe>();
             this.recipeLikes = new HashSet<RecipeLike>();
@@ -45,14 +43,10 @@
         [MaxLength(ModelConstants.UserLastNameMaxLength)]
         public string LastName { get; set; }
 
-        [Required]
-        [ForeignKey("Country")]
         public int CountryID { get; set; }
 
         public virtual Country Country { get; set; }
 
-        [Required]
-        [ForeignKey("Image")]
         public int ImageID { get; set; }
 
         public virtual Image Image { get; set; }
@@ -69,7 +63,7 @@
             set { this.createdArticles = value; }
         }
 
-        public virtual ICollection<Article> FavoriteArticles
+        public virtual ICollection<Favorite> FavoriteArticles
         {
             get { return this.favoriteArticles; }
             set { this.favoriteArticles = value; }

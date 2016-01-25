@@ -13,6 +13,42 @@ namespace MasterChef.Web {
     public partial class SiteMaster {
         
         /// <summary>
+        /// FavouriteArticlesPrivateItemMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor FavouriteArticlesPrivateItemMenu;
+        
+        /// <summary>
+        /// AddRecipePrivateItemMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor AddRecipePrivateItemMenu;
+        
+        /// <summary>
+        /// MyRecipesPrivateItemMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor MyRecipesPrivateItemMenu;
+        
+        /// <summary>
+        /// LoginView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginView LoginView;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>
