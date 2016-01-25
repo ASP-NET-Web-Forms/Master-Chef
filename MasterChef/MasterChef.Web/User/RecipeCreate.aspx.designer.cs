@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MasterChef.Web {
+namespace MasterChef.Web.User {
     
     
-    public partial class SiteMaster {
+    public partial class RecipeCreate {
         
         /// <summary>
-        /// MainContent control.
+        /// GMap1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::Subgurim.Controles.GMap GMap1;
     }
 }
