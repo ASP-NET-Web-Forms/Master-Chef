@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GMaps">
+      <HintPath>..\..\..\GMaps.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -322,6 +325,7 @@
     <Content Include="Uploaded_Files\Users\97.jpg" />
     <Content Include="Uploaded_Files\Users\98.jpg" />
     <Content Include="Uploaded_Files\Users\99.jpg" />
+    <Content Include="User\RecipeCreate.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -502,6 +506,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="User\RecipeCreate.aspx.cs">
+      <DependentUpon>RecipeCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\RecipeCreate.aspx.designer.cs">
+      <DependentUpon>RecipeCreate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -514,7 +525,6 @@
     <Folder Include="Admin\" />
     <Folder Include="Uploaded_Files\Articles\" />
     <Folder Include="Uploaded_Files\Recipes\" />
-    <Folder Include="User\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MasterChef.Data\MasterChef.Data.csproj">

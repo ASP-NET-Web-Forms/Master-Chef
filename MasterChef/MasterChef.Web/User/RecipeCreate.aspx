@@ -1,8 +1,4 @@
-﻿<%@ Page Title="" Language="C#"
-    MasterPageFile="~/Site.Master"
-    AutoEventWireup="true"
-    CodeBehind="RecipeCreate.aspx.cs"
-    Inherits="MasterChef.Web.User.RecipeCreate" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RecipeCreate.aspx.cs" Inherits="MasterChef.Web.User.RecipeCreate" %>
 
 <%@ Register Assembly="GMaps" Namespace="Subgurim.Controles" TagPrefix="cc1" %>
 
