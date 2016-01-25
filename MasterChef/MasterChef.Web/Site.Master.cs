@@ -96,6 +96,12 @@
 
                 // TODO: cache data using this.Cache -> sitemaster
             }
+            else
+            {
+                AddRecipePrivateItemMenu.Attributes.CssStyle.Add(HtmlTextWriterStyle.Display, "none");
+                FavouriteArticlesPrivateItemMenu.Attributes.CssStyle.Add(HtmlTextWriterStyle.Display, "none");
+                MyRecipesPrivateItemMenu.Attributes.CssStyle.Add(HtmlTextWriterStyle.Display, "none");
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
