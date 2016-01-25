@@ -14,7 +14,6 @@
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
         private IMasterChefData data;
-        private string currentUserID;
         protected string currentUserImagePath;
 
         protected void Page_Init(object sender, EventArgs e)
@@ -98,9 +97,9 @@
             }
             else
             {
-                AddRecipePrivateItemMenu.Attributes.CssStyle.Add(HtmlTextWriterStyle.Display, "none");
-                FavouriteArticlesPrivateItemMenu.Attributes.CssStyle.Add(HtmlTextWriterStyle.Display, "none");
-                MyRecipesPrivateItemMenu.Attributes.CssStyle.Add(HtmlTextWriterStyle.Display, "none");
+                AddRecipePrivateItemMenu.Visible = false;
+                FavouriteArticlesPrivateItemMenu.Visible = false;
+                MyRecipesPrivateItemMenu.Visible = false;
             }
         }
 
