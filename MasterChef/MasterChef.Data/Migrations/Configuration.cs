@@ -60,53 +60,53 @@ namespace MasterChef.Data.Migrations
                 context.Countries.Add(country);
             }
 
-            //// Users
-            //var countryBulgaria = context.Countries.Local.Single(item => item.Name == "Bulgaria");
-            //var userAdmin = new AppUser
-            //{
-            //    UserName = "admin@admin",
-            //    Email = "admin@admin",
-            //    FirstName = NameData.GetFirstName(),
-            //    LastName = NameData.GetSurname(),
-            //    Country = countryBulgaria,
-            //    Image = adminImage
-            //};
-            //userManager.Create(userAdmin, userAdmin.UserName);
-            //userManager.AddToRole(userAdmin.Id, adminRole);
+            // Users
+            var countryBulgaria = context.Countries.Local.Single(item => item.Name == "Bulgaria");
+            var userAdmin = new AppUser
+            {
+                UserName = "admin@admin",
+                Email = "admin@admin",
+                FirstName = NameData.GetFirstName(),
+                LastName = NameData.GetSurname(),
+                Country = countryBulgaria,
+                Image = adminImage
+            };
+            userManager.Create(userAdmin, userAdmin.UserName);
+            userManager.AddToRole(userAdmin.Id, adminRole);
 
-            //for (int userIndex = 0; userIndex < 100; userIndex++)
-            //{
-            //    bool isSuccess = false;
+            for (int userIndex = 0; userIndex < 100; userIndex++)
+            {
+                bool isSuccess = false;
 
-            //    while (!isSuccess)
-            //    {
-            //        var firstName = NameData.GetFirstName();
-            //        var lastName = NameData.GetSurname();
-            //        var userName = firstName + "@" + lastName;
+                while (!isSuccess)
+                {
+                    var firstName = NameData.GetFirstName();
+                    var lastName = NameData.GetSurname();
+                    var userName = firstName + "@" + lastName;
 
-            //        Country country = null;
-            //        while (country == null)
-            //        {
-            //            var countryName = PlaceData.GetCountry();
-            //            country = context.Countries.Local.SingleOrDefault(item => item.Name == countryName);
-            //        }
+                    Country country = null;
+                    while (country == null)
+                    {
+                        var countryName = PlaceData.GetCountry();
+                        country = context.Countries.Local.SingleOrDefault(item => item.Name == countryName);
+                    }
 
-            //        var user = new AppUser
-            //        {
-            //            UserName = userName,
-            //            Email = userName,
-            //            FirstName = firstName,
-            //            LastName = lastName,
-            //            Country = country,
-            //            Image = new Image() { Path = string.Format("~/Uploaded_Files/Users/{0}.jpg", userIndex + 1) }
-            //        };
-            //        isSuccess = userManager.Create(user, userName).Succeeded;
-            //        if (isSuccess)
-            //        {
-            //            userManager.AddToRole(user.Id, userRole);
-            //        }
-            //    }
-            //}
+                    var user = new AppUser
+                    {
+                        UserName = userName,
+                        Email = userName,
+                        FirstName = firstName,
+                        LastName = lastName,
+                        Country = country,
+                        Image = new Image() { Path = string.Format("~/Uploaded_Files/Users/{0}.jpg", userIndex + 1) }
+                    };
+                    isSuccess = userManager.Create(user, userName).Succeeded;
+                    if (isSuccess)
+                    {
+                        userManager.AddToRole(user.Id, userRole);
+                    }
+                }
+            }
 
             context.SaveChanges();
         }
