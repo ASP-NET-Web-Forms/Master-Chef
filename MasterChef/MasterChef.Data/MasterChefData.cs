@@ -9,6 +9,7 @@
     using MasterChef.Models.Ingredient;
     using MasterChef.Models.Recipe;
     using MasterChef.Models.AppUser;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     public class MasterChefData : IMasterChefData
     {
@@ -98,6 +99,14 @@
             get
             {
                 return this.GetRepository<RecipeRating>();
+            }
+        }
+
+        public IRepository<IdentityRole> Roles
+        {
+            get
+            {
+                return this.GetRepository<IdentityRole>();
             }
         }
 

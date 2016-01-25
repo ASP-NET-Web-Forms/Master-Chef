@@ -12,7 +12,6 @@
     using Country;
     using Image;
     using Common.Constants;
-
     public class AppUser : IdentityUser
     {
         private ICollection<Comment> comments;
