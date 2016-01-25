@@ -1,11 +1,11 @@
-﻿using System;
-using System.Web;
-using System.Web.UI;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-
-namespace MasterChef.Web.Account
+﻿namespace MasterChef.Web.Account
 {
+    using System;
+    using System.Web;
+    using System.Web.UI;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.Owin;
+
     public partial class Confirm : Page
     {
         protected string StatusMessage

@@ -48,6 +48,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -90,10 +94,6 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <Private>True</Private>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
       <Private>True</Private>
@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Account\AccountDetails.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -176,6 +177,7 @@
     <Content Include="Content\themes\bootstrap.paper.css" />
     <Content Include="Content\themes\bootstrap.paper.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Controls\FileUpload.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -218,6 +220,108 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Uploaded_Files\admin.jpg" />
+    <Content Include="Uploaded_Files\default.png" />
+    <Content Include="Uploaded_Files\Users\1.jpg" />
+    <Content Include="Uploaded_Files\Users\10.jpg" />
+    <Content Include="Uploaded_Files\Users\100.jpg" />
+    <Content Include="Uploaded_Files\Users\11.jpg" />
+    <Content Include="Uploaded_Files\Users\12.jpg" />
+    <Content Include="Uploaded_Files\Users\13.jpg" />
+    <Content Include="Uploaded_Files\Users\14.jpg" />
+    <Content Include="Uploaded_Files\Users\15.jpg" />
+    <Content Include="Uploaded_Files\Users\16.jpg" />
+    <Content Include="Uploaded_Files\Users\17.jpg" />
+    <Content Include="Uploaded_Files\Users\18.jpg" />
+    <Content Include="Uploaded_Files\Users\19.jpg" />
+    <Content Include="Uploaded_Files\Users\2.jpg" />
+    <Content Include="Uploaded_Files\Users\20.jpg" />
+    <Content Include="Uploaded_Files\Users\21.jpg" />
+    <Content Include="Uploaded_Files\Users\22.jpg" />
+    <Content Include="Uploaded_Files\Users\23.jpg" />
+    <Content Include="Uploaded_Files\Users\24.jpg" />
+    <Content Include="Uploaded_Files\Users\25.jpg" />
+    <Content Include="Uploaded_Files\Users\26.jpg" />
+    <Content Include="Uploaded_Files\Users\27.jpg" />
+    <Content Include="Uploaded_Files\Users\28.jpg" />
+    <Content Include="Uploaded_Files\Users\29.jpg" />
+    <Content Include="Uploaded_Files\Users\3.jpg" />
+    <Content Include="Uploaded_Files\Users\30.jpg" />
+    <Content Include="Uploaded_Files\Users\31.jpg" />
+    <Content Include="Uploaded_Files\Users\32.jpg" />
+    <Content Include="Uploaded_Files\Users\33.jpg" />
+    <Content Include="Uploaded_Files\Users\34.jpg" />
+    <Content Include="Uploaded_Files\Users\35.jpg" />
+    <Content Include="Uploaded_Files\Users\36.jpg" />
+    <Content Include="Uploaded_Files\Users\37.jpg" />
+    <Content Include="Uploaded_Files\Users\38.jpg" />
+    <Content Include="Uploaded_Files\Users\39.jpg" />
+    <Content Include="Uploaded_Files\Users\4.jpg" />
+    <Content Include="Uploaded_Files\Users\40.jpg" />
+    <Content Include="Uploaded_Files\Users\41.jpg" />
+    <Content Include="Uploaded_Files\Users\42.jpg" />
+    <Content Include="Uploaded_Files\Users\43.jpg" />
+    <Content Include="Uploaded_Files\Users\44.jpg" />
+    <Content Include="Uploaded_Files\Users\45.jpg" />
+    <Content Include="Uploaded_Files\Users\46.jpg" />
+    <Content Include="Uploaded_Files\Users\47.jpg" />
+    <Content Include="Uploaded_Files\Users\48.jpg" />
+    <Content Include="Uploaded_Files\Users\49.jpg" />
+    <Content Include="Uploaded_Files\Users\5.jpg" />
+    <Content Include="Uploaded_Files\Users\50.jpg" />
+    <Content Include="Uploaded_Files\Users\51.jpg" />
+    <Content Include="Uploaded_Files\Users\52.jpg" />
+    <Content Include="Uploaded_Files\Users\53.jpg" />
+    <Content Include="Uploaded_Files\Users\54.jpg" />
+    <Content Include="Uploaded_Files\Users\55.jpg" />
+    <Content Include="Uploaded_Files\Users\56.jpg" />
+    <Content Include="Uploaded_Files\Users\57.jpg" />
+    <Content Include="Uploaded_Files\Users\58.jpg" />
+    <Content Include="Uploaded_Files\Users\59.jpg" />
+    <Content Include="Uploaded_Files\Users\6.jpg" />
+    <Content Include="Uploaded_Files\Users\60.jpg" />
+    <Content Include="Uploaded_Files\Users\61.jpg" />
+    <Content Include="Uploaded_Files\Users\62.jpg" />
+    <Content Include="Uploaded_Files\Users\63.jpg" />
+    <Content Include="Uploaded_Files\Users\64.jpg" />
+    <Content Include="Uploaded_Files\Users\65.jpg" />
+    <Content Include="Uploaded_Files\Users\66.jpg" />
+    <Content Include="Uploaded_Files\Users\67.jpg" />
+    <Content Include="Uploaded_Files\Users\68.jpg" />
+    <Content Include="Uploaded_Files\Users\69.jpg" />
+    <Content Include="Uploaded_Files\Users\7.jpg" />
+    <Content Include="Uploaded_Files\Users\70.jpg" />
+    <Content Include="Uploaded_Files\Users\71.jpg" />
+    <Content Include="Uploaded_Files\Users\72.jpg" />
+    <Content Include="Uploaded_Files\Users\73.jpg" />
+    <Content Include="Uploaded_Files\Users\74.jpg" />
+    <Content Include="Uploaded_Files\Users\75.jpg" />
+    <Content Include="Uploaded_Files\Users\76.jpg" />
+    <Content Include="Uploaded_Files\Users\77.jpg" />
+    <Content Include="Uploaded_Files\Users\78.jpg" />
+    <Content Include="Uploaded_Files\Users\79.jpg" />
+    <Content Include="Uploaded_Files\Users\8.jpg" />
+    <Content Include="Uploaded_Files\Users\80.jpg" />
+    <Content Include="Uploaded_Files\Users\81.jpg" />
+    <Content Include="Uploaded_Files\Users\82.jpg" />
+    <Content Include="Uploaded_Files\Users\83.jpg" />
+    <Content Include="Uploaded_Files\Users\84.jpg" />
+    <Content Include="Uploaded_Files\Users\85.jpg" />
+    <Content Include="Uploaded_Files\Users\86.jpg" />
+    <Content Include="Uploaded_Files\Users\87.jpg" />
+    <Content Include="Uploaded_Files\Users\88.jpg" />
+    <Content Include="Uploaded_Files\Users\89.jpg" />
+    <Content Include="Uploaded_Files\Users\9.jpg" />
+    <Content Include="Uploaded_Files\Users\90.jpg" />
+    <Content Include="Uploaded_Files\Users\91.jpg" />
+    <Content Include="Uploaded_Files\Users\92.jpg" />
+    <Content Include="Uploaded_Files\Users\93.jpg" />
+    <Content Include="Uploaded_Files\Users\94.jpg" />
+    <Content Include="Uploaded_Files\Users\95.jpg" />
+    <Content Include="Uploaded_Files\Users\96.jpg" />
+    <Content Include="Uploaded_Files\Users\97.jpg" />
+    <Content Include="Uploaded_Files\Users\98.jpg" />
+    <Content Include="Uploaded_Files\Users\99.jpg" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -233,6 +337,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\AccountDetails.aspx.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AccountDetails.aspx.designer.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -357,6 +468,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FileUpload.ascx.cs">
+      <DependentUpon>FileUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FileUpload.ascx.designer.cs">
+      <DependentUpon>FileUpload.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -394,8 +512,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
-    <Folder Include="Controls\" />
-    <Folder Include="Uploaded_Files\" />
+    <Folder Include="Uploaded_Files\Articles\" />
+    <Folder Include="Uploaded_Files\Recipes\" />
     <Folder Include="User\" />
   </ItemGroup>
   <ItemGroup>
