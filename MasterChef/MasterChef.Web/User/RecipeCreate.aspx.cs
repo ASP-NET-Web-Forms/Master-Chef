@@ -1,10 +1,9 @@
 ﻿namespace MasterChef.Web.User
 {
     using System;
-
     using Subgurim.Controles;
 
-    public partial class RecipeCreate : System.Web.UI.Page
+    public partial class RecipeCreate : BaseAuthorizationPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
