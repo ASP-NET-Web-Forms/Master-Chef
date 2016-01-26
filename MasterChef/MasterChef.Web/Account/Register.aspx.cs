@@ -59,7 +59,9 @@ namespace MasterChef.Web.Account
             }
             else
             {
-                user.Image = new Image { Path = filePathAndName };
+                var image = new Image { Path = filePathAndName };
+                this.data.Images.Add(image);
+                user.Image = image;
             }
 
             IdentityResult result = manager.Create(user, Password.Text);
