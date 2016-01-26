@@ -206,6 +206,7 @@
     <Content Include="App_Data\countries.json" />
     <Content Include="App_Data\ingredients.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Recipe\Browse.aspx" />
     <Content Include="Recipe\Create.aspx" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -582,7 +583,15 @@
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\HomeNewestArticlesViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\RecipeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipe\Browse.aspx.cs">
+      <DependentUpon>Browse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recipe\Browse.aspx.designer.cs">
+      <DependentUpon>Browse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Recipe\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
