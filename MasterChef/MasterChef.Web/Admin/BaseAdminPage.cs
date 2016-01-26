@@ -16,21 +16,20 @@
             dbContext = new MasterChefDbContext();
             data = new MasterChefData(dbContext);
 
-            bool isAuthenticatedAndAdmin = this.User.Identity.IsAuthenticated;
+            bool isAuthenticated = this.User.Identity.IsAuthenticated;
 
-            if (isAuthenticatedAndAdmin)
+            if (isAuthenticated)
             {
                 var user = data.Users.All()
                     .Single(x => x.UserName == this.Context.User.Identity.Name);
                 var adminRole = data.Roles.All()
                     .Single(x => x.Name == "admin");
 
-                isAuthenticatedAndAdmin = user.Roles.Any(role => role.RoleId == adminRole.Id);
-            }
-
-            if (!isAuthenticatedAndAdmin)
-            {
-                HttpContext.Current.Response.Redirect("~/Default");
+                bool isAdmin = user.Roles.Any(role => role.RoleId == adminRole.Id);
+                if (!isAdmin)
+                {
+                    HttpContext.Current.Response.Redirect("~/Error/403");
+                }
             }
         }
 

@@ -32,6 +32,7 @@ input[type="select"] {
     .jumbotron {
         margin-top: 20px;
     }
+
     .body-content {
         padding: 0;
     }
@@ -75,4 +76,17 @@ input[type="select"] {
 
 .thumbnail-height {
     height: 330px !important;
+}}
+
+.article-details-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.article-details-image-ratio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 750px;
+    max-width: 750px;
 }

@@ -63,8 +63,8 @@
                             <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-cutlery" /> Recipes <span class="caret"/></a>
                             <ul class="dropdown-menu">
                                 <li><a runat="server" href="~/Recipe/Browse">Browse Recipes</a></li>
-                                <li><a runat="server" ID="AddRecipePrivateItemMenu" href="~/User/RecipeCreate">Add Recipe</a></li>
-                                <li><a runat="server" ID="MyRecipesPrivateItemMenu" href="~/Recipe/MyRecipes">My Recipes</a></li>
+                                <li><a runat="server" ID="AddRecipePrivateItemMenu" href="~/Recipe/Create">Add Recipe</a></li>
+                                <li><a runat="server" ID="MyRecipesPrivateItemMenu" href="~/User/MyRecipes">My Recipes</a></li>
                             </ul>
                         </li>
                         <li runat="server" ID="AdminPanelMenu" class="dropdown">
