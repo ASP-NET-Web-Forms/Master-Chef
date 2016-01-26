@@ -113,13 +113,14 @@
         private ICollection<Ingredient> GetIngredients(string text)
         {
             var ingredients = new List<Ingredient>();
+            var stringSeparators = new string[] { ", " };
+            var charSeparators = new char[] { '[', ']' };
 
-            var splittedText = text.Split(',');
-            var charSeparators = new char[] { ' ' };
+            var splittedText = text.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
 
             for (int i = 0; i < splittedText.Length; i++)
             {
-                var splittedIngredient = splittedText[i].Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+                var splittedIngredient = splittedText[i].Split(stringSeparators, StringSplitOptions.RemoveEmptyEntries);
                 string name = splittedIngredient[0];
                 int quantity = int.Parse(splittedIngredient[1]);
 
