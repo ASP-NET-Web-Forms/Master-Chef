@@ -122,7 +122,20 @@
             {
                 var splittedIngredient = splittedText[i].Split(stringSeparators, StringSplitOptions.RemoveEmptyEntries);
                 string name = splittedIngredient[0];
-                int quantity = int.Parse(splittedIngredient[1]);
+                int quantity = 0;
+                if (!int.TryParse(splittedIngredient[1], out quantity))
+                {
+                    if (splittedIngredient[1].IndexOf('/') > -1)
+                    {
+                        var quantitySplitted = splittedIngredient[1].Split('/').Select(q => int.Parse(q)).ToArray();
+                        if (quantitySplitted[1] == 0)
+                        {
+                            continue;
+                        }
+
+                        quantity = quantitySplitted[0] / quantitySplitted[1];
+                    }
+                }
 
                 var ingredient = new Ingredient()
                 {
