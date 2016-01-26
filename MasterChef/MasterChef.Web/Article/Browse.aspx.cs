@@ -53,7 +53,6 @@
 
         private void LoadData()
         {
-
             var articles = data.Articles.All()
                 .OrderByDescending(a => a.CreatedOn)
                 .Select(a => new ArticleViewModel
