@@ -63,6 +63,7 @@
         {
             var loggedInUserName = HttpContext.Current.User.Identity.Name;
             var currentUserId = this.data.Users.All().FirstOrDefault(x => x.UserName == loggedInUserName).Id;
+            var ingredientsForRecipe = GetIngredients(this.RecipeIngredients.Text);
 
             Recipe recipe = new Recipe()
             {
@@ -76,7 +77,7 @@
                 isVegitarian = this.isVegetarianDish,
                 Latitude = 41.124588,
                 Longitude = 13.713464,
-                Ingradients = GetIngredients(this.RecipeIngredients.Text)
+                Ingradients = ingredientsForRecipe
             };
             
 
@@ -96,15 +97,45 @@
 
             if (string.IsNullOrEmpty(filePathAndName))
             {
-                recipe.ImageID = this.data.Images.Find(1).ID;
+                recipe.ImageID = this.data.Images.All().FirstOrDefault().ID;
             }
             else
             {
-                recipe.Image = new Image { Path = filePathAndName };
+                var image = new Image { Path = filePathAndName };
+                this.data.Images.Add(image);
+                recipe.Image = image;
             }
 
             this.data.Recipes.Add(recipe);
-            this.data.SaveChanges(); // Need to fix bug on SaveChanges()
+            this.data.SaveChanges();
+        }
+
+        private ICollection<Ingredient> GetIngredients(string text)
+        {
+            var ingredients = new List<Ingredient>();
+
+            var splittedText = text.Split(',');
+            var charSeparators = new char[] { ' ' };
+
+            for (int i = 0; i < splittedText.Length; i++)
+            {
+                var splittedIngredient = splittedText[i].Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+                string name = splittedIngredient[0];
+                int quantity = int.Parse(splittedIngredient[1]);
+
+                var ingredient = new Ingredient()
+                {
+                    Name = name,
+                    Quantity = quantity,
+                    Measurement = "gr",
+                    CreatedOn = DateTime.Now
+                };
+
+                this.data.Ingredients.Add(ingredient);
+                ingredients.Add(ingredient);
+            }
+
+            return ingredients;
         }
 
         protected void isHot_CheckedChanged(object sender, EventArgs e)
@@ -127,34 +158,6 @@
         protected void isVegetarian_CheckedChanged(object sender, EventArgs e)
         {
             this.isVegetarianDish = true;
-        }
-
-        private IList<Ingredient> GetIngredients(string text)
-        {
-            var ingredients = new List<Ingredient>();
-
-            var splittedText = text.Split(',');
-
-            for (int i = 0; i < splittedText.Length; i++)
-            {
-                var splittedIngredient = splittedText[i].Split(' ');
-                string name = splittedIngredient[0];
-                int quantity = int.Parse(splittedIngredient[1]);
-
-                var ingredient = new Ingredient()
-                {
-                    Name = name,
-                    Quantity = quantity,
-                    Measurement = "gr",
-                    CreatedOn = DateTime.Now
-                };
-
-                this.data.Ingredients.Add(ingredient);
-                this.data.SaveChanges();
-                ingredients.Add(ingredient);
-            }            
-
-            return ingredients;
         }
     }
 }
