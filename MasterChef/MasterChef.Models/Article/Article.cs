@@ -25,6 +25,7 @@
         public int ID { get; set; }
 
         [Required]
+        [MinLength(ModelConstants.ArticleContentMinLength)]
         public string Content { get; set; }
 
         [Required]

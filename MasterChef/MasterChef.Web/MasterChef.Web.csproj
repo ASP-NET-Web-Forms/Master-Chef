@@ -162,7 +162,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\AccountDetails.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -185,7 +184,7 @@
     <Content Include="Admin\ImagesGrid.aspx" />
     <Content Include="Admin\RecipesGrid.aspx" />
     <Content Include="Admin\UsersGrid.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Article\Browse.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\themes\bootstrap.paper.css" />
@@ -234,8 +233,17 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Uploaded_Files\039f3249-5e4d-40d4-9276-5481e13ead7e..jpg" />
+    <Content Include="Uploaded_Files\145f7181-c023-42bf-b577-b464fdf86fa3..jpg" />
+    <Content Include="Uploaded_Files\3d36ec34-7e78-496a-b4ce-4e8d21981186..jpg" />
+    <Content Include="Uploaded_Files\53f319d5-ccf2-4ff4-8e10-44734cf4b74e..jpg" />
+    <Content Include="Uploaded_Files\63149b5c-6cdf-4de4-a738-cd91a738e533..jpg" />
+    <Content Include="Uploaded_Files\6a0094fb-9e34-46cf-8e49-6d6bbdfe7fe6..jpg" />
+    <Content Include="Uploaded_Files\78cf94ab-50aa-4485-9df7-68853e92c65c..jpg" />
+    <Content Include="Uploaded_Files\976be924-df7f-4ebe-a492-6283888ba3e8..jpg" />
     <Content Include="Uploaded_Files\admin.jpg" />
     <Content Include="Uploaded_Files\default.png" />
+    <Content Include="Uploaded_Files\MasterChefSiteLogo.png" />
     <Content Include="Uploaded_Files\Users\1.jpg" />
     <Content Include="Uploaded_Files\Users\10.jpg" />
     <Content Include="Uploaded_Files\Users\100.jpg" />
@@ -341,7 +349,6 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
@@ -510,23 +517,22 @@
       <DependentUpon>UsersGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\DatabaseConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="BaseAdminPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="BaseAuthorizationPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Article\Browse.aspx.cs">
+      <DependentUpon>Browse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Article\Browse.aspx.designer.cs">
+      <DependentUpon>Browse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileUpload.ascx.cs">
       <DependentUpon>FileUpload.ascx</DependentUpon>
@@ -545,6 +551,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

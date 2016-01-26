@@ -1,5 +1,5 @@
 ﻿using MasterChef.Data;
-using MasterChef.Models.Article;
+using MasterChef.Models.Image;
 using MasterChef.Web.User;
 using System;
 using System.Linq;
@@ -39,7 +39,7 @@ namespace MasterChef.Web.Admin
                 var loggedInUserName = HttpContext.Current.User.Identity.Name;
                 var currentUserId = this.data.Users.All().FirstOrDefault(x => x.UserName == loggedInUserName).Id;
 
-                var newImage = new Models.Image.Image
+                var newImage = new Image
                 {
                     Path = filePathAndName
                 };
@@ -47,7 +47,7 @@ namespace MasterChef.Web.Admin
                 this.data.Images.Add(newImage);
                 this.data.SaveChanges();
 
-                var newArticle = new Article
+                var newArticle = new MasterChef.Models.Article.Article
                 {
                     Title = this.title.Value,
                     ImageID = newImage.ID,

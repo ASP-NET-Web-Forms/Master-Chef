@@ -74,9 +74,6 @@
             var dbContext = new MasterChefDbContext();
             this.data = new MasterChefData(dbContext);
 
-            adminpanel.Visible = false;
-            CreateArticle.Visible = false;
-
             if (Context.User.Identity.IsAuthenticated)
             {
                 var user = this.data.Users
