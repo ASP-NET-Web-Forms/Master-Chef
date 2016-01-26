@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MasterChef.Web._Default" %>
-
+<%@ OutputCache Duration="200" VaryByParam="*" %>
 <%@ Register TagPrefix="uc" TagName="NewestArticles" Src="~/Controls/NewestArticles.ascx" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">

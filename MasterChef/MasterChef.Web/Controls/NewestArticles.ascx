@@ -1,5 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NewestArticles.ascx.cs" Inherits="MasterChef.Web.Controls.NewestArticles" %>
-
 <div class="row">
     <asp:ListView ID="ListViewNewestArticles" runat="server" ItemType="MasterChef.Web.Models.HomeNewestArticlesViewModel">
         <ItemTemplate>
