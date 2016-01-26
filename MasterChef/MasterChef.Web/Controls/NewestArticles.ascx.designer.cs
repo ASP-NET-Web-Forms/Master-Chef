@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MasterChef.Web {
+namespace MasterChef.Web.Controls {
     
     
-    public partial class _Default {
+    public partial class NewestArticles {
         
         /// <summary>
-        /// UserControlNewestArticles control.
+        /// ListViewNewestArticles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MasterChef.Web.Controls.NewestArticles UserControlNewestArticles;
+        protected global::System.Web.UI.WebControls.ListView ListViewNewestArticles;
     }
 }

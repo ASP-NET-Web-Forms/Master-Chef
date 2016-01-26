@@ -63,3 +63,16 @@ input[type="select"] {
     padding-top: 0px;
     margin-top: 20px;
 }
+
+.img-home-size {
+    height: 230px !important;
+}
+
+.home-tag {
+    font-size: 12px !important;
+    margin: 3px;
+}
+
+.thumbnail-height {
+    height: 330px !important;
+}

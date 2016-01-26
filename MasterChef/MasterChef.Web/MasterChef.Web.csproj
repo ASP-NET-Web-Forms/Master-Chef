@@ -191,6 +191,7 @@
     <Content Include="Content\themes\bootstrap.paper.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Controls\FileUpload.ascx" />
+    <Content Include="Controls\NewestArticles.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -243,6 +244,7 @@
     <Content Include="Uploaded_Files\976be924-df7f-4ebe-a492-6283888ba3e8..jpg" />
     <Content Include="Uploaded_Files\admin.jpg" />
     <Content Include="Uploaded_Files\default.png" />
+    <Content Include="Uploaded_Files\home-banner.png" />
     <Content Include="Uploaded_Files\MasterChefSiteLogo.png" />
     <Content Include="Uploaded_Files\Users\1.jpg" />
     <Content Include="Uploaded_Files\Users\10.jpg" />
@@ -538,6 +540,13 @@
     <Compile Include="Controls\FileUpload.ascx.designer.cs">
       <DependentUpon>FileUpload.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\NewestArticles.ascx.cs">
+      <DependentUpon>NewestArticles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NewestArticles.ascx.designer.cs">
+      <DependentUpon>NewestArticles.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -549,6 +558,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\HomeNewestArticlesViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
