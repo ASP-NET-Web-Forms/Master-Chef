@@ -11,5 +11,14 @@ namespace MasterChef.Web.Error {
     
     
     public partial class _403 {
+        
+        /// <summary>
+        /// ErrorImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ErrorImage;
     }
 }
