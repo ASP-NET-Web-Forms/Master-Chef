@@ -4,22 +4,41 @@
 <%@ Register Assembly="GMaps" Namespace="Subgurim.Controles" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <p class="text-danger">
+        <asp:Literal runat="server" ID="ErrorMessage" />
+    </p>
+
     <div class="form-horizontal">
         <asp:Panel ID="DivLabelErrorMessage" runat="server" Visible="false">
             <asp:Label ID="LabelErrorMessage" runat="server" ClientIDMode="static" CssClass="label label-danger"></asp:Label>
         </asp:Panel>
         <h2>Create new recipe</h2>
         <hr />
+        <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="RecipeName" CssClass="col-md-2 control-label">Name</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="RecipeName" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeName"
+                    CssClass="text-danger" ErrorMessage="The name field is required." />
+                <asp:RangeValidator runat="server" MinimumValue="5" MaximumValue="100" ControlToValidate="RecipeName"
+                    CssClass="text-danger" ErrorMessage="Name must be between 5 and 100 characters."/>
+                <asp:RegularExpressionValidator runat="server" ValidationExpression="([A-Za-z0-9])\w+" 
+                    ControlToValidate="RecipeName" CssClass="text-danger" ErrorMessage="Invalid recipe name."/>
             </div>
         </div>
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="RecipeDescription" CssClass="col-md-2 control-label">How to prepare</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="RecipeDescription" TextMode="multiline" Columns="30" Rows="7" runat="server" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeDescription"
+                    CssClass="text-danger" ErrorMessage="The description field is required." />
+
+                <asp:RangeValidator runat="server" MinimumValue="3" MaximumValue="1000" ControlToValidate="RecipeDescription"
+                    CssClass="text-danger" ErrorMessage="Description must be between 3 and 1000 characters."/>
+
+                <asp:RegularExpressionValidator runat="server" ValidationExpression="([A-Za-z0-9\.\-])\w+" 
+                    ControlToValidate="RecipeDescription" CssClass="text-danger" ErrorMessage="Invalid description."/>
             </div>
         </div>
         <div class="form-group">
@@ -58,7 +77,15 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="RecipeIngredients" CssClass="col-md-2 control-label">Ingredients</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox ID="RecipeIngredients" TextMode="multiline" Columns="10" Rows="4" runat="server" CssClass="form-control" placeholder="Format: [ ingredient 1 ] [ quantity ],[ ingredient 2 ] [ quantity ], ..."/>
+                <asp:TextBox ID="RecipeIngredients" TextMode="multiline" Columns="10" Rows="4" runat="server" CssClass="form-control" placeholder="Format: [ ingredient 1 ] [ quantity ],[ ingredient 2 ] [ quantity ], ..." />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeIngredients"
+                    CssClass="text-danger" ErrorMessage="The ingredients field is required." />
+
+                <asp:RangeValidator runat="server" MinimumValue="3" MaximumValue="1000" ControlToValidate="RecipeIngredients"
+                    CssClass="text-danger" ErrorMessage="Ingredients must be between 3 and 1000 characters."/>
+
+                <asp:RegularExpressionValidator runat="server" ValidationExpression="([A-Za-z0-9\.\-])\w+" 
+                    ControlToValidate="RecipeDescription" CssClass="text-danger" ErrorMessage="Invalid description."/>
             </div>
         </div>
         <div class="form-group">
