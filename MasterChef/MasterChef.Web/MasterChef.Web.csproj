@@ -193,7 +193,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Controls\FileUpload.ascx" />
     <Content Include="Error\403.aspx" />
+    <Content Include="Error\403.gif" />
     <Content Include="Error\404.aspx" />
+    <Content Include="Error\404.gif" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

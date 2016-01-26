@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace MasterChef.Web.Error
+﻿namespace MasterChef.Web.Error
 {
+    using System;
+
     public partial class _404 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ErrorImage.ImageUrl = ResolveUrl("~/Error/404.gif");
         }
     }
 }
