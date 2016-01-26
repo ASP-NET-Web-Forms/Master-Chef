@@ -13,7 +13,7 @@ namespace MasterChef.Data.Migrations
     using Models.Country;
     using Models.Image;
     using Models.Ingredient;
-
+    using Models.Article;
     public sealed class Configuration : DbMigrationsConfiguration<MasterChefDbContext>
     {
         public Configuration()
@@ -71,7 +71,7 @@ namespace MasterChef.Data.Migrations
             {
                 context.IngredientNames.Add(name);
             }
-            
+
             // Users
             var countryBulgaria = context.Countries.Local.Single(item => item.Name == "Bulgaria");
             var userAdmin = new AppUser
@@ -120,6 +120,25 @@ namespace MasterChef.Data.Migrations
                         userManager.AddToRole(user.Id, userRole);
                     }
                 }
+            }
+
+            // Articles
+            for (int i = 0; i < 15; i++)
+            {
+                var content = TextData.GetSentences(30 + ((i + 1) * 7));
+                var title = TextData.GetSentence();
+                var createdOn = DateTime.Now;
+
+                var article = new Article
+                {
+                    Content = content,
+                    Title = title,
+                    CreatedOn = createdOn,
+                    Creator = userAdmin,
+                    Image = new Image() { Path = string.Format("~/Uploaded_Files/Users/{0}.jpg", i + 1) }
+                };
+
+                context.Articles.Add(article);
             }
 
             context.SaveChanges();

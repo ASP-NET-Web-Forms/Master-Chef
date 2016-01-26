@@ -9,7 +9,7 @@
     using Microsoft.Owin;
     using Microsoft.Owin.Security;
     using Data;
-    using Models.AppUser;
+    using MasterChef.Models.AppUser;
 
     public class EmailService : IIdentityMessageService
     {

@@ -5,8 +5,8 @@
 
     using Microsoft.AspNet.Identity;
     using Microsoft.Owin.Security;
-    using Models;
-    using Models.AppUser;
+    using MasterChef.Models.AppUser;
+
     public static class IdentityHelper
     {
         // Used for XSRF when linking external logins

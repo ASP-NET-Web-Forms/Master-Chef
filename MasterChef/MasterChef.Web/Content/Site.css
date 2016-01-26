@@ -47,3 +47,19 @@ input[type="select"] {
 .nav-buttons-clickable-anchor {
     cursor: pointer;
 }
+
+.article-image {
+    width: 200px;
+    float: left;
+    border: 1px solid #c0c0c0;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+
+.article-content {
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 20px;
+}
