@@ -5,7 +5,9 @@
         <ItemTemplate>
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail thumbnail-height">
-                    <asp:Image runat="server" CssClass="img-responsive img-rounded img-home-size" ImageUrl="<%# Item.ImagePath %>"></asp:Image>
+                    <a href="<%#: ResolveUrl("~/Article/Details?Id="+Item.ID) %>">
+                        <asp:Image runat="server" CssClass="img-responsive img-rounded img-home-size" ImageUrl="<%# Item.ImagePath %>"></asp:Image>
+                    </a>
                     <div>
                         <span class="label label-primary home-tag">
                             <%#: "Comments: " + Item.Comments%>
