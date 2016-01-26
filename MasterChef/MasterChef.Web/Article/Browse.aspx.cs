@@ -8,37 +8,9 @@
     using Models;
     using MasterChef.Models.Article;
 
-    public partial class Browse : BaseAuthorizationPage
+    public partial class Browse : System.Web.UI.Page
     {
-
-        private const string SHOW_MESSAGE = "Show filters";
-        private const string HIDE_MESSAGE = "Hide filters";
-
-        //private HashSet<OrderModel> orderByCollection;
-        //private HashSet<OrderModel> orderTypeCollection;
-
         private IMasterChefData data;
-
-        private bool IsFilterOn
-        {
-            get
-            {
-                if (Session["IsFilterOn"] == null)
-                {
-                    return false;
-                }
-
-                return (bool)Session["IsFilterOn"];
-            }
-            set
-            {
-                Session["IsFilterOn"] = value;
-            }
-        }
-
-        protected void Page_Init(object sender, EventArgs e)
-        {
-        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -75,8 +47,6 @@
 
         protected void GetFilteredArticles(object sender, EventArgs e)
         {
-            Session["IsFilterOn"] = true;
-
             if (!string.IsNullOrEmpty(this.OrderBy.SelectedValue))
             {
                 Session["OrderBy"] = this.OrderBy.SelectedValue;
