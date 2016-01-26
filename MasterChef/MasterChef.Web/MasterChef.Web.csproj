@@ -185,7 +185,6 @@
     <Content Include="Content\themes\bootstrap.paper.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Controls\FileUpload.ascx" />
-    <Content Include="Controls\Grid.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -481,13 +480,6 @@
     </Compile>
     <Compile Include="Controls\FileUpload.ascx.designer.cs">
       <DependentUpon>FileUpload.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Grid.ascx.cs">
-      <DependentUpon>Grid.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\Grid.ascx.designer.cs">
-      <DependentUpon>Grid.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
