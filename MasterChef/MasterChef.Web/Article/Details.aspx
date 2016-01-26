@@ -10,7 +10,7 @@
             </div>
             <div>
                 <div class="row">
-                    <asp:Image runat="server" id="ArticleImage" class="article-details-image-ratio img-rounded" />
+                    <asp:Image runat="server" id="ArticleImage" class="article-details-image-ratio img-rounded img-responsive" />
                     <div class="lead article-details-content truncate well well-lg" runat="server" id="ArticleContent" />
                 </div>
                 <div class="row">
