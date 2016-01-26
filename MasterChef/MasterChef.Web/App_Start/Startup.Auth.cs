@@ -7,7 +7,7 @@
     using Microsoft.Owin.Security.Cookies;
     using Owin;
     using MasterChef.Data;
-    using Models.AppUser;
+    using MasterChef.Models.AppUser;
 
     public partial class Startup {
 

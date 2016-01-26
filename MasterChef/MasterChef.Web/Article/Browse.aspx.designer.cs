@@ -7,72 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MasterChef.Web {
+namespace MasterChef.Web.Article {
     
     
-    public partial class SiteMaster {
+    public partial class Browse {
         
         /// <summary>
-        /// FavouriteArticlesPrivateItemMenu control.
+        /// UpdatePanelArticle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor FavouriteArticlesPrivateItemMenu;
+        protected global::System.Web.UI.UpdatePanel UpdatePanelArticle;
         
         /// <summary>
-        /// CreateArticlePrivateAdminItemMenu control.
+        /// FilterContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor CreateArticlePrivateAdminItemMenu;
+        protected global::System.Web.UI.WebControls.Panel FilterContainer;
         
         /// <summary>
-        /// AddRecipePrivateItemMenu control.
+        /// OrderType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor AddRecipePrivateItemMenu;
+        protected global::System.Web.UI.WebControls.DropDownList OrderType;
         
         /// <summary>
-        /// MyRecipesPrivateItemMenu control.
+        /// OrderBy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor MyRecipesPrivateItemMenu;
+        protected global::System.Web.UI.WebControls.DropDownList OrderBy;
         
         /// <summary>
-        /// AdminPanelMenu control.
+        /// ListViewArticles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AdminPanelMenu;
+        protected global::System.Web.UI.WebControls.ListView ListViewArticles;
         
         /// <summary>
-        /// LoginView control.
+        /// DataPagingPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView LoginView;
+        protected global::System.Web.UI.WebControls.Panel DataPagingPanel;
         
         /// <summary>
-        /// MainContent control.
+        /// DataPager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.DataPager DataPager;
     }
 }

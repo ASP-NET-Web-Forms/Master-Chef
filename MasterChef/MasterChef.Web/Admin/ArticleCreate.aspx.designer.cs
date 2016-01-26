@@ -7,72 +7,90 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MasterChef.Web {
+namespace MasterChef.Web.Admin {
     
     
-    public partial class SiteMaster {
+    public partial class ArticleCreate {
         
         /// <summary>
-        /// FavouriteArticlesPrivateItemMenu control.
+        /// DivLabelErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor FavouriteArticlesPrivateItemMenu;
+        protected global::System.Web.UI.WebControls.Panel DivLabelErrorMessage;
         
         /// <summary>
-        /// CreateArticlePrivateAdminItemMenu control.
+        /// LabelErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor CreateArticlePrivateAdminItemMenu;
+        protected global::System.Web.UI.WebControls.Label LabelErrorMessage;
         
         /// <summary>
-        /// AddRecipePrivateItemMenu control.
+        /// FileUploadControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor AddRecipePrivateItemMenu;
+        protected global::MasterChef.Web.Controls.FileUpload FileUploadControl;
         
         /// <summary>
-        /// MyRecipesPrivateItemMenu control.
+        /// title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor MyRecipesPrivateItemMenu;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText title;
         
         /// <summary>
-        /// AdminPanelMenu control.
+        /// RequiredFieldTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AdminPanelMenu;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldTitle;
         
         /// <summary>
-        /// LoginView control.
+        /// content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView LoginView;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea content;
         
         /// <summary>
-        /// MainContent control.
+        /// Requiredfieldcontent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Requiredfieldcontent;
+        
+        /// <summary>
+        /// backButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor backButton;
+        
+        /// <summary>
+        /// Submit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit;
     }
 }

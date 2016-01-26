@@ -5,7 +5,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %>・MasterChef</title>
+    <title><%: Page.Title %> • MasterChef</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -54,16 +54,27 @@
                         <li class="dropdown">
                             <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-list-alt" /> Articles <span class="caret"/></a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Articles/Browse">Browse Articles</a></li>
+                                <li><a runat="server" href="~/Article/Browse">Browse Articles</a></li>
                                 <li><a runat="server" ID="FavouriteArticlesPrivateItemMenu" href="~/Articles/Favorite">Favorite Articles</a></li>
+                                <li><a runat="server" ID="CreateArticlePrivateAdminItemMenu" href="/Admin/ArticleCreate.aspx">Create Article</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-cutlery" /> Recipes <span class="caret"/></a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Recipes/Browse">Browse Recipes</a></li>
+                                <li><a runat="server" href="~/Recipe/Browse">Browse Recipes</a></li>
                                 <li><a runat="server" ID="AddRecipePrivateItemMenu" href="~/User/RecipeCreate">Add Recipe</a></li>
-                                <li><a runat="server" ID="MyRecipesPrivateItemMenu" href="~/Recipes/MyRecipes">My Recipes</a></li>
+                                <li><a runat="server" ID="MyRecipesPrivateItemMenu" href="~/Recipe/MyRecipes">My Recipes</a></li>
+                            </ul>
+                        </li>
+                        <li runat="server" ID="AdminPanelMenu" class="dropdown">
+                            <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-user" /> AdminMenu <span class="caret"/></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Admin/UsersGrid">Users Grid</a></li>
+						        <li><a runat="server" href="~/Admin/RecipesGrid">Recipes Grid</a></li>
+						        <li><a runat="server" href="~/Admin/ArticlesGrid">Articles Grid</a></li>
+						        <li><a runat="server" href="~/Admin/CountriesGrid">Countries Grid</a></li>
+						        <li><a runat="server" href="~/Admin/ImagesGrid">Images Grid</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -94,7 +105,8 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p class="text-center">&copy; <%: DateTime.Now.Year %> <a href="https://github.com/ASP-NET-Web-Forms/Master-Chef">MasterChef</a>・TelerikAcademy Team 'Mobile Invasion'</p>
+
+                <p class="text-center">&copy; <%: DateTime.Now.Year %> <a href="https://github.com/ASP-NET-Web-Forms/Master-Chef">MasterChef</a> • TelerikAcademy Team 'Mobile Invasion'</p>
             </footer>
         </div>
     </form>

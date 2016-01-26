@@ -43,8 +43,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GMaps">
-      <HintPath>..\..\..\GMaps.dll</HintPath>
+    <Reference Include="GMaps, Version=4.1.0.6, Culture=neutral, PublicKeyToken=564d55b144e7aa5a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Subgurim.Maps.4.1.0.6\lib\net20\GMaps.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.EntityDataSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.EntityDataSource.6.0.0\lib\net40\Microsoft.AspNet.EntityDataSource.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -157,7 +162,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\AccountDetails.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -174,7 +178,13 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Admin\ArticleCreate.aspx" />
+    <Content Include="Admin\ArticlesGrid.aspx" />
+    <Content Include="Admin\CountriesGrid.aspx" />
+    <Content Include="Admin\ImagesGrid.aspx" />
+    <Content Include="Admin\RecipesGrid.aspx" />
+    <Content Include="Admin\UsersGrid.aspx" />
+    <Content Include="Article\Browse.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\themes\bootstrap.paper.css" />
@@ -223,8 +233,17 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Uploaded_Files\039f3249-5e4d-40d4-9276-5481e13ead7e..jpg" />
+    <Content Include="Uploaded_Files\145f7181-c023-42bf-b577-b464fdf86fa3..jpg" />
+    <Content Include="Uploaded_Files\3d36ec34-7e78-496a-b4ce-4e8d21981186..jpg" />
+    <Content Include="Uploaded_Files\53f319d5-ccf2-4ff4-8e10-44734cf4b74e..jpg" />
+    <Content Include="Uploaded_Files\63149b5c-6cdf-4de4-a738-cd91a738e533..jpg" />
+    <Content Include="Uploaded_Files\6a0094fb-9e34-46cf-8e49-6d6bbdfe7fe6..jpg" />
+    <Content Include="Uploaded_Files\78cf94ab-50aa-4485-9df7-68853e92c65c..jpg" />
+    <Content Include="Uploaded_Files\976be924-df7f-4ebe-a492-6283888ba3e8..jpg" />
     <Content Include="Uploaded_Files\admin.jpg" />
     <Content Include="Uploaded_Files\default.png" />
+    <Content Include="Uploaded_Files\MasterChefSiteLogo.png" />
     <Content Include="Uploaded_Files\Users\1.jpg" />
     <Content Include="Uploaded_Files\Users\10.jpg" />
     <Content Include="Uploaded_Files\Users\100.jpg" />
@@ -330,7 +349,6 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
@@ -453,24 +471,65 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Admin\ArticleCreate.aspx.cs">
+      <DependentUpon>ArticleCreate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Admin\ArticleCreate.aspx.designer.cs">
+      <DependentUpon>ArticleCreate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ArticlesGrid.aspx.cs">
+      <DependentUpon>ArticlesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ArticlesGrid.aspx.designer.cs">
+      <DependentUpon>ArticlesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaseAdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CountriesGrid.aspx.cs">
+      <DependentUpon>CountriesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CountriesGrid.aspx.designer.cs">
+      <DependentUpon>CountriesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ImagesGrid.aspx.cs">
+      <DependentUpon>ImagesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ImagesGrid.aspx.designer.cs">
+      <DependentUpon>ImagesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RecipesGrid.aspx.cs">
+      <DependentUpon>RecipesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RecipesGrid.aspx.designer.cs">
+      <DependentUpon>RecipesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UsersGrid.aspx.cs">
+      <DependentUpon>UsersGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UsersGrid.aspx.designer.cs">
+      <DependentUpon>UsersGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\DatabaseConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="BaseAuthorizationPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="Article\Browse.aspx.cs">
+      <DependentUpon>Browse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Article\Browse.aspx.designer.cs">
+      <DependentUpon>Browse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileUpload.ascx.cs">
       <DependentUpon>FileUpload.ascx</DependentUpon>
@@ -489,6 +548,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -522,7 +582,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="Uploaded_Files\Articles\" />
     <Folder Include="Uploaded_Files\Recipes\" />
   </ItemGroup>
@@ -575,4 +634,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <PostBuildEvent>
+      if not exist "$(WebProjectOutputDir)\bin\Roslyn" md "$(WebProjectOutputDir)\bin\Roslyn"
+      start /MIN xcopy /s /y /R "$(OutDir)roslyn\*.*" "$(WebProjectOutputDir)\bin\Roslyn"
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

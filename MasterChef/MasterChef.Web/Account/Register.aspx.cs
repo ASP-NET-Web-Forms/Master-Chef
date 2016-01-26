@@ -55,7 +55,7 @@ namespace MasterChef.Web.Account
 
             if (string.IsNullOrEmpty(filePathAndName))
             {
-                user.ImageID = this.data.Images.Find(1).ID;
+                user.ImageID = this.data.Images.All().FirstOrDefault().ID;
             }
             else
             {
