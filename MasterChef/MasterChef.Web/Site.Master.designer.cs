@@ -22,13 +22,13 @@ namespace MasterChef.Web {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor FavouriteArticlesPrivateItemMenu;
         
         /// <summary>
-        /// CreateArticle control.
+        /// CreateArticlePrivateAdminItemMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor CreateArticle;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor CreateArticlePrivateAdminItemMenu;
         
         /// <summary>
         /// AddRecipePrivateItemMenu control.
@@ -49,13 +49,13 @@ namespace MasterChef.Web {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor MyRecipesPrivateItemMenu;
         
         /// <summary>
-        /// adminpanel control.
+        /// AdminPanelMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl adminpanel;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AdminPanelMenu;
         
         /// <summary>
         /// LoginView control.

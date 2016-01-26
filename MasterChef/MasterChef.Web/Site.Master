@@ -56,7 +56,7 @@
                             <ul class="dropdown-menu">
                                 <li><a runat="server" href="~/Article/Browse">Browse Articles</a></li>
                                 <li><a runat="server" ID="FavouriteArticlesPrivateItemMenu" href="~/Articles/Favorite">Favorite Articles</a></li>
-                                <li><a runat="server" ID="CreateArticle" href="/Admin/ArticleCreate.aspx">Create Article</a></li>
+                                <li><a runat="server" ID="CreateArticlePrivateAdminItemMenu" href="/Admin/ArticleCreate.aspx">Create Article</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -67,7 +67,7 @@
                                 <li><a runat="server" ID="MyRecipesPrivateItemMenu" href="~/Recipe/MyRecipes">My Recipes</a></li>
                             </ul>
                         </li>
-                        <li runat="server" ID="adminpanel" class="dropdown">
+                        <li runat="server" ID="AdminPanelMenu" class="dropdown">
                             <a runat="server" data-toggle="dropdown" class="nav-buttons-clickable-anchor"><span class="glyphicon glyphicon-user" /> AdminMenu <span class="caret"/></a>
                             <ul class="dropdown-menu">
                                 <li><a runat="server" href="~/Admin/UsersGrid">Users Grid</a></li>

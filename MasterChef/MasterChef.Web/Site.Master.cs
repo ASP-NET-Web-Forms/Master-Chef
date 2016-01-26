@@ -76,6 +76,9 @@
 
             if (Context.User.Identity.IsAuthenticated)
             {
+                AdminPanelMenu.Visible = false;
+                CreateArticlePrivateAdminItemMenu.Visible = false;
+
                 var user = this.data.Users
                     .All()
                     .Where(u => u.UserName == this.Context.User.Identity.Name)
@@ -88,8 +91,8 @@
 
                 if (user.Roles.Any(r => r.RoleId == adminRole.Id))
                 {
-                    adminpanel.Visible = true;
-                    CreateArticle.Visible = true;
+                    AdminPanelMenu.Visible = true;
+                    CreateArticlePrivateAdminItemMenu.Visible = true;
                 }
 
                 (LoginView.FindControl("ProfileImage") as Image).ImageUrl = user.Image.Path;
@@ -101,6 +104,8 @@
                 AddRecipePrivateItemMenu.Visible = false;
                 FavouriteArticlesPrivateItemMenu.Visible = false;
                 MyRecipesPrivateItemMenu.Visible = false;
+                AdminPanelMenu.Visible = false;
+                CreateArticlePrivateAdminItemMenu.Visible = false;
             }
         }
 
