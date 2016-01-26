@@ -36,9 +36,6 @@
 
                 <asp:RegularExpressionValidator runat="server" ValidationExpression=".{3,1000}" ControlToValidate="RecipeDescription"
                     CssClass="text-danger" ErrorMessage="Description must be between 3 and 1000 characters."/>
-
-                <asp:RegularExpressionValidator runat="server" ValidationExpression="(([[A-Z]\w+)( \w+)*, [0-9].[1-9]])+" 
-                    ControlToValidate="RecipeDescription" CssClass="text-danger" ErrorMessage="Invalid expression. Ex. [NAME1, QUANTITY][NAME2, QUANTITY]..."/>
             </div>
         </div>
         <div class="form-group">
@@ -77,12 +74,12 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="RecipeIngredients" CssClass="col-md-2 control-label">Ingredients</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox ID="RecipeIngredients" TextMode="multiline" Columns="10" Rows="4" runat="server" CssClass="form-control" placeholder="Format: [ ingredient 1 ] [ quantity ],[ ingredient 2 ] [ quantity ], ..." />
+                <asp:TextBox ID="RecipeIngredients" TextMode="multiline" Columns="10" Rows="4" runat="server" CssClass="form-control" placeholder="Format: [NAME1, QUANTITY][NAME2, QUANTITY]..." />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeIngredients"
                     CssClass="text-danger" ErrorMessage="The ingredients field is required." />
 
-                <asp:RegularExpressionValidator runat="server" ValidationExpression=".{3,1000}" ControlToValidate="RecipeIngredients"
-                    CssClass="text-danger" ErrorMessage="Ingredients must be between 3 and 1000 characters."/>
+                <asp:RegularExpressionValidator runat="server" ValidationExpression="(([[A-Z]\w+)( \w+)*, [0-9].[1-9]])+" ControlToValidate="RecipeIngredients"
+                    CssClass="text-danger" ErrorMessage="Wrong expression! Ex. [Garlic, 1][Potatoes, 5]"/>
             </div>
         </div>
         <div class="form-group">
