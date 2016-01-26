@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MasterChef.Web.User {
+namespace MasterChef.Web.Recipe {
     
     
-    public partial class RecipeCreate {
+    public partial class Create {
         
         /// <summary>
         /// DivLabelErrorMessage control.

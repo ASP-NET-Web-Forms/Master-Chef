@@ -1,23 +1,14 @@
-﻿using MasterChef.Data;
-using MasterChef.Models.Image;
-using MasterChef.Web.User;
-using System;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-
-namespace MasterChef.Web.Admin
+﻿namespace MasterChef.Web.Admin
 {
+    using System;
+    using System.Linq;
+    using System.Web;
+    using System.Web.UI;
+    using MasterChef.Models.Image;
+    using MasterChef.Web.User;
+
     public partial class ArticleCreate : BaseAdminPage
     {
-        private new IMasterChefData data;
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            var dbContext = new MasterChefDbContext();
-            this.data = new MasterChefData(dbContext);
-        }
-
         protected void Submit_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
@@ -60,7 +51,7 @@ namespace MasterChef.Web.Admin
 
                 this.data.SaveChanges();
 
-                Response.Redirect("~/Default");
+                Response.Redirect("~/Article/Browse");
             }
             else
             {

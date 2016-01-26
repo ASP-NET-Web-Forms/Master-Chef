@@ -345,7 +345,9 @@
     <Content Include="Uploaded_Files\Users\97.jpg" />
     <Content Include="Uploaded_Files\Users\98.jpg" />
     <Content Include="Uploaded_Files\Users\99.jpg" />
-    <Content Include="User\RecipeCreate.aspx" />
+    <Content Include="Recipe\Create.aspx" />
+    <Content Include="User\MyRecipes.aspx" />
+    <Content Include="User\Profile.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -574,12 +576,26 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="User\RecipeCreate.aspx.cs">
-      <DependentUpon>RecipeCreate.aspx</DependentUpon>
+    <Compile Include="Recipe\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\RecipeCreate.aspx.designer.cs">
-      <DependentUpon>RecipeCreate.aspx</DependentUpon>
+    <Compile Include="Recipe\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyRecipes.aspx.cs">
+      <DependentUpon>MyRecipes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyRecipes.aspx.designer.cs">
+      <DependentUpon>MyRecipes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

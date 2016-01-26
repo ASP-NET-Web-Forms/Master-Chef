@@ -1,18 +1,17 @@
-﻿namespace MasterChef.Web.User
+﻿namespace MasterChef.Web.Recipe
 {
     using System;
-
-    using Subgurim.Controles;
-    using Data;
-    using MasterChef.Models.Ingredient;
     using System.Collections.Generic;
-    using MasterChef.Models.Recipe;
     using System.Web;
     using System.Linq;
+    using Subgurim.Controles;
+    using User;
+    using MasterChef.Models.Ingredient;
     using MasterChef.Models.Image;
-    public partial class RecipeCreate : System.Web.UI.Page
+    using MasterChef.Models.Recipe;
+
+    public partial class Create : BaseAuthorizationPage
     {
-        private IMasterChefData data;
         private bool isHotDish = false;
         private bool isColdDish = false;
         private bool isSweetDish = false;
@@ -22,9 +21,6 @@
         protected void Page_Load(object sender, EventArgs e)
         {
             InitializeGoogleMaps();
-
-            var dbContext = new MasterChefDbContext();
-            this.data = new MasterChefData(dbContext);
         }
 
         private void InitializeGoogleMaps()

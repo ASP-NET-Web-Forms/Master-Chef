@@ -1,17 +1,12 @@
-﻿using MasterChef.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace MasterChef.Web.Article
+﻿namespace MasterChef.Web.Article
 {
-    public partial class Details : System.Web.UI.Page
+    using System;
+    using System.Linq;
+    using System.Web;
+
+    public partial class Details : BaseAuthorizationPage
     {
         private int articleId;
-        private MasterChefData data;
         private string loggedUserId;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -28,9 +23,6 @@ namespace MasterChef.Web.Article
             {
                 Response.Redirect("~/Error/404");
             }
-
-            var dbContext = new MasterChefDbContext();
-            data = new MasterChefData(dbContext);
 
             var loggedUserName = HttpContext.Current.User.Identity.Name;
             this.loggedUserId = this.data.Users
