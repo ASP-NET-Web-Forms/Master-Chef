@@ -8,7 +8,8 @@
         public const int UserLastNameMaxLength = 15;
 
         public const int ArticleTitleMinLength = 5;
-        public const int ArticleTitleMaxLength = 60;
+        public const int ArticleTitleMaxLength = 300;
+        public const int ArticleContentMinLength = 1000;
 
         public const int CommentContentMinLength = 2;
         public const int CommentContentMaxLength = 200;

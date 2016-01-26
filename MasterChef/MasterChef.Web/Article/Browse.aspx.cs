@@ -55,22 +55,24 @@
         private void LoadData()
         {
 
-            //var articles = data.Articles.All()
-            //    .Select(a => new ArticleViewModel
-            //    {
-            //        //CreatorName = a.Creator.UserName,
-            //        //CreatedOn = a.Date,
-            //        //ID = a.ID,
-            //        //Image = a.Image,
-            //        //Location = a.Location,
-            //        //Title = a.Title,
-            //        //PeopleJoined = a.UsersEvents.Count()
-            //    })
-            //    .ToList();
+            var articles = data.Articles.All()
+                .OrderByDescending(a => a.CreatedOn)
+                .Select(a => new ArticleViewModel
+                {
+                    ID = a.ID,
+                    Content = a.Content,
+                    Title = a.Title,
+                    CreatedOn = a.CreatedOn,
+                    CreatorID = a.CreatorID,
+                    Creator = a.Creator.UserName,
+                    ImagePath = a.Image.Path,
+                    Comments = a.Comments.Count,
+                    Likes = a.Likes.Count
+                })
+            .ToList();
 
-
-            //this.ListViewArticles.DataSource = articles;
-            //this.ListViewArticles.DataBind();
+            this.ListViewArticles.DataSource = articles;
+            this.ListViewArticles.DataBind();
         }
 
         protected void GetFilteredArticles(object sender, EventArgs e)

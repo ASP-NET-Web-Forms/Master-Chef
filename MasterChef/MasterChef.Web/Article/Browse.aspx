@@ -5,9 +5,9 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <asp:UpdatePanel ID="UpdatePanelArticle" runat="server">
         <ContentTemplate>
-            <asp:Panel runat="server" CssClass="panel panel-warning" ID="FilterContainer">
+            <asp:Panel runat="server" CssClass="panel panel-default" ID="FilterContainer">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Filters</h3>
+                    <h3 class="text-center">Filters</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -49,13 +49,9 @@
                 <div class="col-md-12">
                     <asp:ListView ID="ListViewArticles" runat="server" ItemType="MasterChef.Web.Models.ArticleViewModel">
                         <ItemTemplate>
-                            <div class="col-lg-12">
-                                <div class="thumbnail">
-                                    <a href="<%#: ResolveUrl("~/Article/Details?Id="+Item.ID) %>" title="<%#: Item.Title %>">
-                                        <div class="ratio-events img-rounded" style="background-image: url('<%#: Item.ImagePath!=null? Page.ResolveUrl(Item.ImagePath): "/Images/default.png" %>')"></div>
-                                    </a>
+                            <div class="col-lg-offset-2 col-lg-8 truncate well well-sm">
                                     <div class="caption">
-                                        <h4 class="truncate well well-sm text-center">
+                                        <h4 class="text-center">
                                             <a href="<%#: ResolveUrl("~/Article/Details?Id="+Item.ID) %>">
                                                 <%#: Item.Title %>
                                             </a>
@@ -63,34 +59,38 @@
                                     </div>
                                     <div>
                                         <div class="row">
+                                            <a href="<%#: ResolveUrl("~/Article/Details?Id="+Item.ID) %>"><asp:Image runat="server" CssClass="article-image" imageUrl="<%#: Item.ImagePath %>" /></a>
+                                            <div class="article-content"><%#: Item.Content.Length > 1000 ? Item.Content.Substring(0, 1000) + "  . . ." : Item.Content %> </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-md-6">
                                                 <p class="truncate additional-beer-info">
-                                                    Creator: <big><a class="text-success" href="<%#: ResolveUrl("~/User/Details?Id="+Item.CreatorID) %>"><%#: Item.Creator %></a> </big>
+                                                    <big class="text-success"><b>Creator: <a href="<%#: ResolveUrl("~/User/Details?Id="+Item.CreatorID) %>"><%#: Item.Creator %></a></b></big>
                                                 </p>
                                             </div>
                                             <div class="col-md-6 text-right">
                                                 <p class="truncate additional-beer-info">
-                                                    <big><strong class="text-success"><%#: Item.Likes %> Likes</strong></big>
+                                                    <big><b class="text-success"><%#: Item.Likes %> Likes</b></big>
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <p class="truncate additional-beer-info">
-                                                    Created On: <big><strong class="text-success"><%#: Item.CreatedOn %></strong> </big>
+                                                   <big class="text-success"><b>Created On: <%#: Item.CreatedOn %></b> </big>
                                                 </p>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="additional-beer-info">
                                                     <p class="truncate text-right">
-                                                        <big><strong class="text-success"><%#: Item.Comments %> Comments</strong></big>
+                                                        <big><b class="text-success"><%#: Item.Comments %> Comments</b></big>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <a href="<%#: ResolveUrl("~/Article/Details?Id="+Item.ID) %>" class="btn btn-primary btn-block">Read all about it!</a>
-                                </div>
+                                </a>
                             </div>
                         </ItemTemplate>
                     </asp:ListView>
