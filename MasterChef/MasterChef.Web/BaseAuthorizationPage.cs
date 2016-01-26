@@ -17,7 +17,7 @@
 
             if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                HttpContext.Current.Response.Redirect("~/");
+                HttpContext.Current.Response.Redirect("~/Account/Login");
             }
         }
 

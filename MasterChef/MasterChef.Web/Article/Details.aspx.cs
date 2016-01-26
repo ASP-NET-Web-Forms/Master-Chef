@@ -42,7 +42,7 @@
 
             if (articleData == null)
             {
-                Response.Redirect("~/Article/Browse");
+                Response.Redirect("~/Error/404");
             }
 
             var userAlreadyLiked = articleData.Likes.Any(like => like.UserID == this.loggedUserId);
