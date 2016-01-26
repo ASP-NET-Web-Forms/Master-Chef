@@ -88,7 +88,8 @@
 
                 if (user.Roles.Any(r => r.RoleId == adminRole.Id))
                 {
-                    // TODO: show admin nav bar
+                    adminpanel.Visible = true;
+                    CreateArticle.Visible = true;
                 }
 
                 (LoginView.FindControl("ProfileImage") as Image).ImageUrl = user.Image.Path;
