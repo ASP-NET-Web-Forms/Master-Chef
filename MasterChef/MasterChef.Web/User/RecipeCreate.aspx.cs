@@ -4,12 +4,12 @@
 
     using Subgurim.Controles;
     using Data;
-    using Models.Ingredient;
+    using MasterChef.Models.Ingredient;
     using System.Collections.Generic;
-    using Models.Recipe;
+    using MasterChef.Models.Recipe;
     using System.Web;
     using System.Linq;
-    using Models.Image;
+    using MasterChef.Models.Image;
     public partial class RecipeCreate : System.Web.UI.Page
     {
         private IMasterChefData data;
