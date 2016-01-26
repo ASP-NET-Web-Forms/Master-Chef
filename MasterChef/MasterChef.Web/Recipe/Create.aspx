@@ -21,9 +21,9 @@
                 <asp:TextBox runat="server" ID="RecipeName" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeName"
                     CssClass="text-danger" ErrorMessage="The name field is required." />
-                <asp:RangeValidator runat="server" MinimumValue="5" MaximumValue="100" ControlToValidate="RecipeName"
-                    CssClass="text-danger" ErrorMessage="Name must be between 5 and 100 characters."/>
-                <asp:RegularExpressionValidator runat="server" ValidationExpression="([A-Za-z0-9])\w+" 
+                <asp:RegularExpressionValidator runat="server" ValidationExpression=".{5,100}" ControlToValidate="RecipeName"
+                    CssClass="text-danger" ErrorMessage="Recipe name must be between 5 and 100 characters."/>
+                <asp:RegularExpressionValidator runat="server" ValidationExpression="([A-Za-z0-9 ])+" 
                     ControlToValidate="RecipeName" CssClass="text-danger" ErrorMessage="Invalid recipe name."/>
             </div>
         </div>
@@ -34,10 +34,10 @@
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeDescription"
                     CssClass="text-danger" ErrorMessage="The description field is required." />
 
-                <asp:RangeValidator runat="server" MinimumValue="3" MaximumValue="1000" ControlToValidate="RecipeDescription"
+                <asp:RegularExpressionValidator runat="server" ValidationExpression=".{3,1000}" ControlToValidate="RecipeDescription"
                     CssClass="text-danger" ErrorMessage="Description must be between 3 and 1000 characters."/>
 
-                <asp:RegularExpressionValidator runat="server" ValidationExpression="([A-Za-z0-9\.\-])\w+" 
+                <asp:RegularExpressionValidator runat="server" ValidationExpression="([A-Za-z0-9\.\-\ ])+" 
                     ControlToValidate="RecipeDescription" CssClass="text-danger" ErrorMessage="Invalid description."/>
             </div>
         </div>
@@ -81,11 +81,8 @@
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeIngredients"
                     CssClass="text-danger" ErrorMessage="The ingredients field is required." />
 
-                <asp:RangeValidator runat="server" MinimumValue="3" MaximumValue="1000" ControlToValidate="RecipeIngredients"
+                <asp:RegularExpressionValidator runat="server" ValidationExpression=".{3,1000}" ControlToValidate="RecipeIngredients"
                     CssClass="text-danger" ErrorMessage="Ingredients must be between 3 and 1000 characters."/>
-
-                <asp:RegularExpressionValidator runat="server" ValidationExpression="([A-Za-z0-9\.\-])\w+" 
-                    ControlToValidate="RecipeDescription" CssClass="text-danger" ErrorMessage="Invalid description."/>
             </div>
         </div>
         <div class="form-group">
