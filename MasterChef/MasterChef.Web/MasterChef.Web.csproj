@@ -179,6 +179,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\ArticleCreate.aspx" />
     <Content Include="Admin\ArticlesGrid.aspx" />
     <Content Include="Admin\CountriesGrid.aspx" />
     <Content Include="Admin\ImagesGrid.aspx" />
@@ -462,6 +463,13 @@
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ArticleCreate.aspx.cs">
+      <DependentUpon>ArticleCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ArticleCreate.aspx.designer.cs">
+      <DependentUpon>ArticleCreate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ArticlesGrid.aspx.cs">
       <DependentUpon>ArticlesGrid.aspx</DependentUpon>

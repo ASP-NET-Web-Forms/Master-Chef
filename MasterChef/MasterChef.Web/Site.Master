@@ -56,6 +56,7 @@
                             <ul class="dropdown-menu">
                                 <li><a runat="server" href="~/Articles/Browse">Browse Articles</a></li>
                                 <li><a runat="server" ID="FavouriteArticlesPrivateItemMenu" href="~/Articles/Favorite">Favorite Articles</a></li>
+                                <li><a runat="server" ID="CreateArticle" href="/Admin/ArticleCreate.aspx">Create Article</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

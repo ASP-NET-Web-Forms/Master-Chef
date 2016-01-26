@@ -74,10 +74,11 @@
             var dbContext = new MasterChefDbContext();
             this.data = new MasterChefData(dbContext);
 
+            adminpanel.Visible = false;
+            CreateArticle.Visible = false;
+
             if (Context.User.Identity.IsAuthenticated)
             {
-                adminpanel.Visible = false;
-
                 var user = this.data.Users
                     .All()
                     .Where(u => u.UserName == this.Context.User.Identity.Name)
@@ -91,6 +92,7 @@
                 if (user.Roles.Any(r => r.RoleId == adminRole.Id))
                 {
                     adminpanel.Visible = true;
+                    CreateArticle.Visible = true;
                 }
 
                 (LoginView.FindControl("ProfileImage") as Image).ImageUrl = user.Image.Path;
@@ -102,7 +104,6 @@
                 AddRecipePrivateItemMenu.Visible = false;
                 FavouriteArticlesPrivateItemMenu.Visible = false;
                 MyRecipesPrivateItemMenu.Visible = false;
-                adminpanel.Visible = false;
             }
         }
 
