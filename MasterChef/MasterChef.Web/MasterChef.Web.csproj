@@ -186,6 +186,7 @@
     <Content Include="Admin\RecipesGrid.aspx" />
     <Content Include="Admin\UsersGrid.aspx" />
     <Content Include="Article\Browse.aspx" />
+    <Content Include="Article\Details.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\themes\bootstrap.paper.css" />
@@ -195,6 +196,7 @@
     <Content Include="Error\403.aspx" />
     <Content Include="Error\403.gif" />
     <Content Include="Controls\NewestArticles.ascx" />
+    <Content Include="Error\404.aspx" />
     <Content Include="Error\404.gif" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -204,6 +206,7 @@
     <Content Include="App_Data\countries.json" />
     <Content Include="App_Data\ingredients.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Recipe\Create.aspx" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -352,7 +355,6 @@
     <Content Include="Uploaded_Files\Users\99.jpg" />
     <Content Include="User\MyRecipes.aspx" />
     <Content Include="User\Profile.aspx" />
-    <Content Include="User\RecipeCreate.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -529,6 +531,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Article\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Article\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BaseAuthorizationPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -560,6 +569,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Error\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -567,6 +583,13 @@
     <Compile Include="Models\HomeNewestArticlesViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipe\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recipe\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -595,13 +618,6 @@
     </Compile>
     <Compile Include="User\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User\RecipeCreate.aspx.cs">
-      <DependentUpon>RecipeCreate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User\RecipeCreate.aspx.designer.cs">
-      <DependentUpon>RecipeCreate.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
