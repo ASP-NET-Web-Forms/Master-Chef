@@ -78,7 +78,7 @@
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeIngredients"
                     CssClass="text-danger" ErrorMessage="The ingredients field is required." />
 
-                <asp:RegularExpressionValidator runat="server" ValidationExpression="(([[A-Z]\w+)( \w+)*, [0-9].[1-9]])+" ControlToValidate="RecipeIngredients"
+                <asp:RegularExpressionValidator runat="server" ValidationExpression="(([[A-Z]\w+)( \w+)*, [0-9](.[1-9])?])+" ControlToValidate="RecipeIngredients"
                     CssClass="text-danger" ErrorMessage="Wrong expression! Ex. [Garlic, 1][Potatoes, 5]"/>
             </div>
         </div>
