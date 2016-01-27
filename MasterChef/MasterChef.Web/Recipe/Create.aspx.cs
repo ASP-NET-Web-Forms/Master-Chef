@@ -77,7 +77,7 @@
                 isVegitarian = this.isVegetarianDish,
                 Latitude = 41.124588,
                 Longitude = 13.713464,
-                Ingradients = ingredientsForRecipe
+                Ingredients = ingredientsForRecipe
             };
             
 

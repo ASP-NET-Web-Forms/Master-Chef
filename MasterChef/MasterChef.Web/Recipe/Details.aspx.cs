@@ -64,7 +64,7 @@ namespace MasterChef.Web.Recipe
             this.isSweetDish.Visible = recipeData.isSweet;
             this.isVegetarianDish.Visible = recipeData.isVegitarian;
 
-            this.IngredientsList.DataSource = recipeData.Ingradients;
+            this.IngredientsList.DataSource = recipeData.Ingredients;
             this.IngredientsList.DataBind();
 
             //this.ListViewUsers.DataSource = articleData.UsersEvents

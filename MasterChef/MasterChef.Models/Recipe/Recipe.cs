@@ -68,7 +68,7 @@
             set { this.ratings = value; }
         }
 
-        public virtual ICollection<Ingredient> Ingradients
+        public virtual ICollection<Ingredient> Ingredients
         {
             get { return this.ingredients; }
             set { this.ingredients = value; }
