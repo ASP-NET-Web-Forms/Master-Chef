@@ -14,7 +14,7 @@
 						AutoGenerateEditButton="true">
 						<Columns>
 							<asp:BoundField DataField="ID" HeaderText="Id" ReadOnly="True" SortExpression="Id"></asp:BoundField>
-							<asp:ImageField DataImageUrlField="Path" HeaderText="Image"></asp:ImageField>
+							<asp:ImageField DataImageUrlField="Path" ControlStyle-Width="250px" HeaderText="Image"></asp:ImageField>
 						</Columns>
 					</asp:GridView>
 					<ef:EntityDataSource runat="server" ID="EntityDataSourceProvider"

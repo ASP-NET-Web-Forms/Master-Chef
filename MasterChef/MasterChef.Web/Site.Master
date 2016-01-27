@@ -104,7 +104,7 @@
         <div class="container body-content">
             <asp:Panel ID="panelSiteMapPath" runat="server">
 				<br />
-				<asp:SiteMapPath ID="SiteMapPath" SiteMapProvider="secureProvider" runat="server"></asp:SiteMapPath>
+                <asp:SiteMapPath ID="SiteMapPath" SiteMapProvider="secureProvider" runat="server"></asp:SiteMapPath>		
 				<br />
 				<br />
 			</asp:Panel>
