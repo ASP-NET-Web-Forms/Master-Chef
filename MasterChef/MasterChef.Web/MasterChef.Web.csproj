@@ -192,7 +192,10 @@
     <Content Include="Content\themes\bootstrap.paper.css" />
     <Content Include="Content\themes\bootstrap.paper.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\odometer-theme-train-station.css" />
+    <Content Include="Controls\Comments.ascx" />
     <Content Include="Controls\FileUpload.ascx" />
+    <Content Include="Controls\Likes.ascx" />
     <Content Include="Error\403.aspx" />
     <Content Include="Error\403.gif" />
     <Content Include="Controls\NewestArticles.ascx" />
@@ -216,6 +219,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\odometer.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -552,12 +556,24 @@
     <Compile Include="Article\Browse.aspx.designer.cs">
       <DependentUpon>Browse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Comments.ascx.cs">
+      <DependentUpon>Comments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Comments.ascx.designer.cs">
+      <DependentUpon>Comments.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FileUpload.ascx.cs">
       <DependentUpon>FileUpload.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\FileUpload.ascx.designer.cs">
       <DependentUpon>FileUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Likes.ascx.cs">
+      <DependentUpon>Likes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Likes.ascx.designer.cs">
+      <DependentUpon>Likes.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\NewestArticles.ascx.cs">
       <DependentUpon>NewestArticles.ascx</DependentUpon>
@@ -591,6 +607,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\CommentViewModel.cs" />
     <Compile Include="Models\HomeNewestArticlesViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\RecipeViewModel.cs" />

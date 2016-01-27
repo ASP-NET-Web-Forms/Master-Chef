@@ -47,7 +47,7 @@
                 <div class="col-md-12">
                     <asp:ListView ID="ListViewArticles" runat="server" ItemType="MasterChef.Web.Models.ArticleViewModel">
                         <ItemTemplate>
-                            <div class="col-lg-offset-2 col-lg-8 truncate well well-sm">
+                            <div class="row col-lg-offset-2 col-lg-8 truncate well well-sm">
                                 <div class="caption">
                                     <h4 class="text-center">
                                         <a href="<%#: ResolveUrl("~/Article/Details?Id="+Item.ID) %>">
@@ -93,8 +93,8 @@
                             </div>
                         </ItemTemplate>
                     </asp:ListView>
-                    <asp:Panel CssClass="row" runat="server" ID="DataPagingPanel">
-                        <div class="col-md-3 col-md-offset-5">
+                    <asp:Panel runat="server" CssClass="row" ID="DataPagingPanel">
+                        <div class="col-md-12 text-center">
                             <asp:DataPager ID="DataPager" runat="server" PageSize="8" QueryStringField="page" PagedControlID="ListViewArticles">
                                 <Fields>
                                     <asp:NextPreviousPagerField ButtonCssClass="btn btn-default" ShowFirstPageButton="true" ShowNextPageButton="false" ShowPreviousPageButton="false" />

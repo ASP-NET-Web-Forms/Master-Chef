@@ -71,7 +71,7 @@
                 <cc1:GMap ID="GMap1" runat="server" enableServerEvents="true" Width="100%" Height="350px" enableHookMouseWheelToZoom="true" mapType="Hybrid" OnClick="OnGoogleMapClick" />
             </div>
         </div>
-        <div class="row text-center"><big><b>NOTE: Quantity Measurements are in Grams. If Quantities are really small it will be noted that it is a count.</b></big></div>
+        <div class="row text-center"><big><b>NOTE: Quantity Measurements are in Grams. If Quantities are really small it will be considered as a count.</b></big></div>
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="RecipeIngredients" CssClass="col-md-2 control-label">Ingredients</asp:Label>
             <div class="col-md-10">

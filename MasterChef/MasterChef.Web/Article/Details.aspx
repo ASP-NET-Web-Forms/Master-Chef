@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Article Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="MasterChef.Web.Article.Details" %>
 
+<%@ Register Src="~/Controls/Likes.ascx" TagPrefix="uc" TagName="LikeControl" %>
+<%@ Register Src="~/Controls/Comments.ascx" TagPrefix="uc" TagName="CommentsControl" %>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Panel runat="server" CssClass="row panel panel-danger" ID="ArticleInfoPanel">
         <div class="col-lg-offset-2 col-lg-8">
@@ -10,7 +13,7 @@
             </div>
             <div>
                 <div class="row">
-                    <asp:Image runat="server" id="ArticleImage" class="article-details-image-ratio img-rounded img-responsive" />
+                    <asp:Image runat="server" ID="ArticleImage" class="article-details-image-ratio img-rounded img-responsive" />
                     <div class="lead article-details-content truncate well well-lg" runat="server" id="ArticleContent" />
                 </div>
                 <div class="row">
@@ -28,23 +31,22 @@
             </div>
         </div>
     </asp:Panel>
-    <%--<asp:UpdatePanel ID="ArticleUpdatePanel" runat="server">
-        <ContentTemplate>
-            <div class="row">
-                <div class="col-md-12">
-                    <asp:Panel CssClass="row" runat="server" ID="DataPagingPanel">
-                        <div class="col-md-3 col-xs-offset-5">
-                            <asp:DataPager ID="DataPager" runat="server" PageSize="8" QueryStringField="page" PagedControlID="ListViewArticles">
-                                <Fields>
-                                    <asp:NextPreviousPagerField ButtonCssClass="btn btn-default" ShowFirstPageButton="true" ShowNextPageButton="false" ShowPreviousPageButton="false" />
-                                    <asp:NumericPagerField CurrentPageLabelCssClass="btn btn-primary" NumericButtonCssClass="btn btn-default" NextPreviousButtonCssClass="btn btn-default" />
-                                    <asp:NextPreviousPagerField ButtonCssClass="btn btn-default" ShowLastPageButton="true" ShowNextPageButton="false" ShowPreviousPageButton="false" />
-                                </Fields>
-                            </asp:DataPager>
-                        </div>
-                    </asp:Panel>
-                </div>
+    <asp:Panel runat="server" ID="LikeCommentPanel" CssClass="row">
+        <div class="panel panel-success">
+            <div class="panel-heading text-center">
+                <h4><b>Like</b></h4>
             </div>
-        </ContentTemplate>
-    </asp:UpdatePanel>--%>
+            <div class="panel-body">
+                <uc:LikeControl runat="server" ID="LikeControl" OnLike="LikeControl_Like" />
+            </div>
+        </div>
+        <div class="panel panel-warning">
+            <div class="panel-heading text-center">
+                <h4><b>Comment</b></h4>
+            </div>
+            <div class="panel-body">
+                <uc:CommentsControl runat="server" ID="CommentControl" OnComment="CommentControl_Comment" />
+            </div>
+        </div>
+    </asp:Panel>
 </asp:Content>

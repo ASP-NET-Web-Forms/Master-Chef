@@ -1,9 +1,13 @@
 ﻿namespace MasterChef.Web.Article
 {
+    using Controls;
     using System;
     using System.Linq;
     using System.Web;
-
+    using MasterChef.Models.Article;
+    using MasterChef.Models.Comment;
+    using Models;
+    using System.Collections.Generic;
     public partial class Details : BaseAuthorizationPage
     {
         private int articleId;
@@ -45,29 +49,78 @@
                 Response.Redirect("~/Error/404");
             }
 
-            var userAlreadyLiked = articleData.Likes.Any(like => like.UserID == this.loggedUserId);
-
-            if (userAlreadyLiked)
-            { 
-                // TODO: change like button to Unlike
-            }
-
             this.ArticleTitle.InnerText = articleData.Title;
             this.ArticleImage.ImageUrl = ResolveUrl(articleData.Image.Path);
             this.ArticleContent.InnerText = articleData.Content;
             this.ArticleCreatorLink.HRef = ResolveUrl("~/User/Details?id=" + articleData.CreatorID);
             this.ArticleCreatorName.InnerText = articleData.Creator.UserName;
             this.ArticleCreatedOn.InnerText = articleData.CreatedOn.ToString("H:mm:ss - dddd dd/MM/yyyy");
+            this.LikeControl.Value = articleData.Likes.Count;
+            this.LikeControl.UserVote = articleData.Likes.Any(l => l.UserID == loggedUserId);
+            this.CommentControl.ArticleComments = GetComments(articleData);
+        }
 
-            //this.ListViewUsers.DataSource = articleData.UsersEvents
-            //    .Select(userEvents => new JoinedUsersViewModel
-            //    {
-            //        UserName = userEvents.User.UserName,
-            //        ID = userEvents.User.Id,
-            //        Image = userEvents.User.Image
-            //    });
+        protected void LikeControl_Like(object sender, LikeEventArgs e)
+        {
+            var articleData = this.data.Articles.Find(articleId);
+            if (e.LikeValue)
+            {
+                ArticleLike like = new ArticleLike()
+                {
+                    ArticleID = articleId,
+                    UserID = loggedUserId
+                };
 
-            //this.ListViewUsers.DataBind();
+                this.data.ArticleLikes.Add(like);
+            }
+            else
+            {
+                var currentUserLike = articleData.Likes.FirstOrDefault(l => l.UserID == loggedUserId);
+                if (currentUserLike == null)
+                {
+                    return;
+                }
+
+                this.data.ArticleLikes.Delete(currentUserLike);
+            }
+
+            this.data.SaveChanges();
+
+            var control = sender as Likes;
+            control.Value = articleData.Likes.Count;
+            control.UserVote = e.LikeValue;
+        }
+
+        protected void CommentControl_Comment(object sender, CommentEventArgs e)
+        {
+            var articleData = this.data.Articles.Find(articleId);
+            var comment = new Comment()
+            {
+                ArticleID = articleId,
+                CreatorID = loggedUserId,
+                CreatedOn = DateTime.Now,
+                Content = e.CommentContent
+            };
+
+            this.data.Comments.Add(comment);
+            this.data.SaveChanges();
+
+            var control = sender as Comments;
+            control.ArticleComments = GetComments(articleData);
+        }
+
+        private List<CommentViewModel> GetComments(Article articleData)
+        {
+            return articleData.Comments
+                .OrderByDescending(c => c.CreatedOn)
+                .Select(c => new CommentViewModel()
+                {
+                    CreatorID = c.CreatorID,
+                    Creator = c.Creator.UserName,
+                    CreatedOn = c.CreatedOn,
+                    Content = c.Content
+                })
+                .ToList();
         }
     }
 }

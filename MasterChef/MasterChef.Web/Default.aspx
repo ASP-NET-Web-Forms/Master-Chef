@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MasterChef.Web._Default" %>
+
 <%@ OutputCache Duration="200" VaryByParam="*" %>
 <%@ Register TagPrefix="uc" TagName="NewestArticles" Src="~/Controls/NewestArticles.ascx" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-   <div class="row">
+    <div class="row">
         <div class="col-md-12 jumbotron">
             <div class="col-md-5">
                 <h1>Master Chef</h1>
@@ -24,5 +25,4 @@
             <uc:NewestArticles runat="server" ID="UserControlNewestArticles" />
         </div>
     </div>
-
 </asp:Content>

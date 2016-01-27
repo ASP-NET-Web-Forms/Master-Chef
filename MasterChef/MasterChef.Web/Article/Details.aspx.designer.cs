@@ -74,5 +74,32 @@ namespace MasterChef.Web.Article {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ArticleCreatedOn;
+        
+        /// <summary>
+        /// LikeCommentPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel LikeCommentPanel;
+        
+        /// <summary>
+        /// LikeControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MasterChef.Web.Controls.Likes LikeControl;
+        
+        /// <summary>
+        /// CommentControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MasterChef.Web.Controls.Comments CommentControl;
     }
 }
