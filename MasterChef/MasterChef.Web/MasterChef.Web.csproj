@@ -163,9 +163,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\AccountDetails.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\EditProfile.aspx" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\Login.aspx" />
@@ -371,13 +371,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\AccountDetails.aspx.cs">
-      <DependentUpon>AccountDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\AccountDetails.aspx.designer.cs">
-      <DependentUpon>AccountDetails.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -391,6 +384,13 @@
     </Compile>
     <Compile Include="Account\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
@@ -656,6 +656,10 @@
     <Folder Include="Uploaded_Files\Recipes\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MasterChef.Common\MasterChef.Common.csproj">
+      <Project>{88a384b6-8db8-412e-ab25-7aa30be44583}</Project>
+      <Name>MasterChef.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MasterChef.Data\MasterChef.Data.csproj">
       <Project>{e60f9e66-d726-4881-b1f5-c9d61a4429e7}</Project>
       <Name>MasterChef.Data</Name>

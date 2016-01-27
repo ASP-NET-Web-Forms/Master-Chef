@@ -1,5 +1,6 @@
 ﻿namespace MasterChef.Web.Controls
 {
+    using Common.Constants;
     using System;
     using System.IO;
     using System.Linq;
@@ -7,11 +8,6 @@
 
     public partial class FileUpload : System.Web.UI.UserControl
     {
-        private const string DEFAULT_PATH = "~/Uploaded_Files/";
-
-        //5 megabytes
-        private const int DEFAULT_MAX_FILE_SIZE = 5 * 1024 * 1024;
-
         private string[] defaulFormats = new string[3] { "image/jpeg", "image/jpg", "image/png" };
 
         public int MaxFileSize { get; set; }
@@ -31,12 +27,12 @@
 
             if (String.IsNullOrEmpty(this.PathValue))
             {
-                this.PathValue = DEFAULT_PATH;
+                this.PathValue = SiteConstants.DefaultImagePath;
             }
 
             if (this.MaxFileSize == 0)
             {
-                this.MaxFileSize = DEFAULT_MAX_FILE_SIZE;
+                this.MaxFileSize = SiteConstants.ImageMaxSize;
             }
 
             if (this.IsRequired)

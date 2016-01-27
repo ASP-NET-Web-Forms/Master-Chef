@@ -2,11 +2,18 @@
 using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using System.Collections.Generic;
+using MasterChef.Models.AppUser;
+using MasterChef.Data;
+using System.Linq;
 
 namespace MasterChef.Web.Account
 {
     public partial class Manage : System.Web.UI.Page
     {
+        protected IMasterChefDbContext dbContext;
+        protected IMasterChefData data;
+
         protected string SuccessMessage
         {
             get;
@@ -26,8 +33,17 @@ namespace MasterChef.Web.Account
 
         public int LoginsCount { get; set; }
 
+
         protected void Page_Load()
         {
+            dbContext = new MasterChefDbContext();
+            data = new MasterChefData(dbContext);
+
+            string userId = this.User.Identity.GetUserId();
+            AppUser currentUser = data.Users.All().Single(x => x.Id == userId);
+            this.userDetails.DataSource = new List<AppUser>() { currentUser };
+            this.userDetails.DataBind();
+
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
             HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
