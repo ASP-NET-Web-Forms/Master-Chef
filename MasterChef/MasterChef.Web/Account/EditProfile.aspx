@@ -28,7 +28,7 @@
                             <asp:TextBox runat="server"
                                 ID="tbFirstName"
                                 CssClass="form-control"
-                                Text="<%# Item.FirstName %>" Placeholder="First name"/>
+                                Text="<%#: Item.FirstName %>" Placeholder="First name"/>
                         </ItemTemplate>
                     </asp:TemplateField>
 
@@ -43,7 +43,7 @@
                             <asp:TextBox runat="server"
                                 ID="tbLastName"
                                 CssClass="form-control"
-                                Text="<%# Item.LastName %>" Placeholder="Last name" />
+                                Text="<%#: Item.LastName %>" Placeholder="Last name" />
                         </ItemTemplate>
                     </asp:TemplateField>
 
@@ -59,7 +59,7 @@
                                 ID="tbEmail"
                                 CssClass="form-control"
                                 Type="Email"
-                                Text="<%# Item.Email %>" Placeholder="Email" />
+                                Text="<%#: Item.Email %>" Placeholder="Email" />
                         </ItemTemplate>
                     </asp:TemplateField>
                                         
@@ -74,7 +74,7 @@
                             <asp:TextBox runat="server"
                                 ID="tbAvatar"
                                 CssClass="form-control"
-                                Text="<%# Item.Image.Path %>" Placeholder="Url..." />
+                                Text="<%#: Item.Image.Path %>" Placeholder="Url..." />
                             <asp:FileUpload ID="fileAvatar" accept=".png, .jpg, .jpeg, .gif" runat="server" AllowMultiple="false" />
                         </ItemTemplate>
                     </asp:TemplateField>
