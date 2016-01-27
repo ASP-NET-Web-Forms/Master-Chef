@@ -123,36 +123,7 @@
                 var splittedIngredient = splittedText[i].Split(stringSeparators, StringSplitOptions.RemoveEmptyEntries);
                 string name = splittedIngredient[0];
                 string quantityString = splittedIngredient[1];
-                int quantityStringDotIndex = quantityString.IndexOf('.');
-                int quantityStringCommaIndex = quantityString.IndexOf(',');
-
-                int quantity = 0;
-                if (!int.TryParse(splittedIngredient[1], out quantity))
-                {
-                    if (splittedIngredient[1].IndexOf('/') > -1)
-                    {
-                        var quantitySplitted = splittedIngredient[1].Split('/').Select(q => int.Parse(q)).ToArray();
-                        if (quantitySplitted[1] == 0)
-                        {
-                            continue;
-                        }
-
-                        quantity = quantitySplitted[0] / quantitySplitted[1];
-                    }
-                    else if (quantityStringDotIndex > -1)
-                    {
-                        quantity = int.Parse(quantityString.Substring(0, quantityStringDotIndex));
-                    }
-                    else if (splittedIngredient[1].IndexOf(',') > -1)
-                    {
-                        quantity = int.Parse(quantityString.Substring(0, quantityStringCommaIndex));
-                    }
-                    else
-                    {
-                        // TODO: maybe throw error?
-                        continue;
-                    }
-                }
+                int quantity = int.Parse(quantityString);
 
                 var ingredient = new Ingredient()
                 {

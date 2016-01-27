@@ -71,6 +71,7 @@
                 <cc1:GMap ID="GMap1" runat="server" enableServerEvents="true" Width="100%" Height="350px" enableHookMouseWheelToZoom="true" mapType="Hybrid" OnClick="OnGoogleMapClick" />
             </div>
         </div>
+        <div class="row text-center"><big><b>NOTE: Quantity Measurements are in Grams. If Quantities are really small it will be noted that it is a count.</b></big></div>
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="RecipeIngredients" CssClass="col-md-2 control-label">Ingredients</asp:Label>
             <div class="col-md-10">
@@ -78,7 +79,7 @@
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeIngredients"
                     CssClass="text-danger" ErrorMessage="The ingredients field is required." />
 
-                <asp:RegularExpressionValidator runat="server" ValidationExpression="(([[A-Z]\w+)( \w+)*, [0-9](.[1-9])?])+" ControlToValidate="RecipeIngredients"
+                <asp:RegularExpressionValidator runat="server" ValidationExpression="(([[A-Z]\w+)( \w+)*, [1-100000]])+" ControlToValidate="RecipeIngredients"
                     CssClass="text-danger" ErrorMessage="Wrong expression! Ex. [Garlic, 1][Potatoes, 5]"/>
             </div>
         </div>

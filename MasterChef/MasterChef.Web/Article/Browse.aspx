@@ -94,7 +94,7 @@
                         </ItemTemplate>
                     </asp:ListView>
                     <asp:Panel CssClass="row" runat="server" ID="DataPagingPanel">
-                        <div class="col-md-3 col-xs-offset-5">
+                        <div class="col-md-3 col-md-offset-5">
                             <asp:DataPager ID="DataPager" runat="server" PageSize="8" QueryStringField="page" PagedControlID="ListViewArticles">
                                 <Fields>
                                     <asp:NextPreviousPagerField ButtonCssClass="btn btn-default" ShowFirstPageButton="true" ShowNextPageButton="false" ShowPreviousPageButton="false" />
