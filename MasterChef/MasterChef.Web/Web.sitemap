@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <!-- Public -->
+  <siteMapNode url="~/" title="Master Chef"  description="Master Chef">
+    <!-- LoggedIn -->
+    <siteMapNode url="~/Account/Manage"			title="Profile"  description="View Profile">
+      <siteMapNode url="~/Account/ManagePassword"			title="Manage Password"  description="Change Password" />
+      <siteMapNode url="~/Account/EditProfile"			title="Edit Profile"  description="" />  
+    </siteMapNode>
+    <siteMapNode url="~/User/MyRecipes"			title="My Recipes"  description="My Recipes" />
+    <siteMapNode url="~/Article/Browse"		title="Articles"  description="List Articles">     
+      <siteMapNode url="~/Article/Details"			title="Article Info"  description="Article Info" />
+    </siteMapNode>
+    <siteMapNode url="~/Recipe/Browse"			title="Recipes"  description="List Recipes">
+      <siteMapNode url="~/Recipe/Create"			title="Add Recipe"  description="Add Recipe" />
+      <siteMapNode url="~/Recipe/Details"			title="Recipe Details"  description="Recipe Info" />
+    </siteMapNode>
+    <!-- Admin Area -->
+    <siteMapNode url="~/Admin/ArticleCreate"			title="Create Article"  description="Create Article" />   
+    <siteMapNode url="~/Admin/UsersGrid"			title="Users Grid"  description="" />
+    <siteMapNode url="~/Admin/RecipesGrid"			title="Recipes Grid"  description="" />
+    <siteMapNode url="~/Admin/ArticlesGrid"		title="Articles Grid"  description="" />
+    <siteMapNode url="~/Admin/CountriesGrid"	title="Countries Grid"  description="" />
+    <siteMapNode url="~/Admin/ImagesGrid"			title="Images Grid"  description="" />
+  </siteMapNode>
+</siteMap>

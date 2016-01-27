@@ -21,6 +21,8 @@ namespace MasterChef.Web
             this.data = new MasterChefData(dbContext);
             var allArticles = this.data.Articles.All();
 
+            Master.FindControl("panelSiteMapPath").Visible = false;
+
             this.UserControlNewestArticles.NewestArticlesList.DataSource = allArticles
                 .OrderByDescending(article => article.CreatedOn)
                 .Take(3)
