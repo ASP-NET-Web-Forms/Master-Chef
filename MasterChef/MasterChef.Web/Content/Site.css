@@ -110,3 +110,11 @@ input[type="select"] {
     margin: 20px;
     margin-bottom: 0px;
 }
+
+.thumbnail-height-recipes {
+    height: 300px !important;
+}
+
+.read-button {
+    margin-bottom: 25px !important;
+}

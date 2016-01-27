@@ -46,41 +46,13 @@
                 <div class="col-md-12">
                     <asp:ListView ID="ListViewRecipes" runat="server" ItemType="MasterChef.Web.Models.RecipeViewModel">
                         <ItemTemplate>
-                            <div class="col-lg-offset-2 col-lg-8 truncate well well-sm">
-                                <div class="caption">
-                                    <h4 class="text-center">
-                                        <a href="<%#: ResolveUrl("~/Recipe/Details?Id="+Item.ID) %>">
-                                            <%#: Item.Name %>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div>
-                                    <div class="row">
-                                        <a href="<%#: ResolveUrl("~/Recipe/Details?Id="+Item.ID) %>">
-                                            <asp:Image runat="server" CssClass="recipe-image" ImageUrl="<%#: Item.ImagePath %>" /></a>
-                                        <div class="article-content"><%#: Item.Description.Length > 1000 ? Item.Description.Substring(0, 1000) + "  . . ." : Item.Description %> </div>
+                            <div class="col-sm-3 col-lg-3 col-md-3">
+                                <a href="<%#: ResolveUrl("~/Recipes/Details?Id="+Item.ID) %>" class="thumbnail thumbnail-height-recipes">
+                                    <asp:Image runat="server" CssClass="img-responsive img-rounded img-home-size" ImageUrl="<%# Item.ImagePath %>"></asp:Image>
+                                    <div class="text-center">
+                                        <asp:Label runat="server" CssClass="lead" Text="<%#: Item.Name %>"></asp:Label>                                        
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p class="truncate additional-beer-info">
-                                                <big class="text-success"><b>Creator: <a href="<%#: ResolveUrl("~/User/Details?Id="+Item.CreatorID) %>"><%#: Item.Creator %></a></b></big>
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                            <p class="truncate additional-beer-info">
-                                                <big><b class="text-success"><%#: Item.Likes %> Likes</b></big>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p class="truncate additional-beer-info">
-                                                <big class="text-success"><b>Created On: <%#: Item.CreatedOn %></b> </big>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="<%#: ResolveUrl("~/Recipe/Details?Id="+Item.ID) %>" class="btn btn-danger btn-block">Read all about it!</a>
+                                    <a href="<%#: ResolveUrl("~/Recipe/Details?Id="+Item.ID) %>" class="btn btn-danger btn-block read-button">Read all about it!</a>
                                 </a>
                             </div>
                         </ItemTemplate>
