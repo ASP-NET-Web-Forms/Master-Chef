@@ -100,3 +100,13 @@ input[type="select"] {
     margin: 20px;
     margin-bottom: 0px;
 }
+
+.my-recipe-image {
+    width: 250px;
+    float: left;
+    border: 1px solid #c0c0c0;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 20px;
+    margin-bottom: 0px;
+}

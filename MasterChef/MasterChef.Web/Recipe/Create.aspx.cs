@@ -108,6 +108,8 @@
 
             this.data.Recipes.Add(recipe);
             this.data.SaveChanges();
+
+            Response.Redirect("~/User/MyRecipes");
         }
 
         private ICollection<Ingredient> GetIngredients(string text)
