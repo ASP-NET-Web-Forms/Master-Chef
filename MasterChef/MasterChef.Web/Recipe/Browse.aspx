@@ -47,7 +47,7 @@
                     <asp:ListView ID="ListViewRecipes" runat="server" ItemType="MasterChef.Web.Models.RecipeViewModel">
                         <ItemTemplate>
                             <div class="col-sm-3 col-lg-3 col-md-3">
-                                <a href="<%#: ResolveUrl("~/Recipes/Details?Id="+Item.ID) %>" class="thumbnail thumbnail-height-recipes">
+                                <a href="<%#: ResolveUrl("~/Recipe/Details?Id="+Item.ID) %>" class="thumbnail thumbnail-height-recipes">
                                     <asp:Image runat="server" CssClass="img-responsive img-rounded img-home-size" ImageUrl="<%# Item.ImagePath %>"></asp:Image>
                                     <div class="text-center">
                                         <asp:Label runat="server" CssClass="lead" Text="<%#: Item.Name %>"></asp:Label>                                        

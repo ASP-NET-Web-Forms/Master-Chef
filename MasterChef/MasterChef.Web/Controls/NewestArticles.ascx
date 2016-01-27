@@ -13,7 +13,7 @@
                             <%#: "Likes: " + Item.Likes %>
                         </span>
                     </div>
-                    <div>
+                    <div class="text-center">
                         <asp:Label runat="server" CssClass="lead" Text="<%#: Item.Title %>"></asp:Label>
                     </div>
                 </a>

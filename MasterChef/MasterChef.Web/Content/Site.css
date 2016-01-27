@@ -118,3 +118,7 @@ input[type="select"] {
 .read-button {
     margin-bottom: 25px !important;
 }
+
+.tag-recipe {
+    margin-right: 3px !important;
+}

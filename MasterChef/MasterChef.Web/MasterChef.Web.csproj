@@ -208,6 +208,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Recipe\Browse.aspx" />
     <Content Include="Recipe\Create.aspx" />
+    <Content Include="Recipe\Details.aspx" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -605,6 +606,13 @@
     </Compile>
     <Compile Include="Recipe\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recipe\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
