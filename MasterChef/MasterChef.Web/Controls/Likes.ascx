@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Likes.ascx.cs" Inherits="MasterChef.Web.Controls.Likes" %>
 
-<asp:UpdatePanel runat="server" ID="ControlWrapper">
+<asp:UpdatePanel runat="server" ID="LikesControlWrapper">
     <ContentTemplate>
         <div class="text-center">
             <div class="row">

@@ -25,10 +25,15 @@
 
         public event LikeEventHandler Like;
 
-        public string LetsTry;
+        public bool mustUpdate;
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
+            if(!mustUpdate)
+            {
+                return;
+            }
+
             this.LabelValue.Text = this.Value.ToString();
 
             if (this.UserVote)

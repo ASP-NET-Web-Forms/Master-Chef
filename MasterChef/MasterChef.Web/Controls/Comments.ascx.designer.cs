@@ -13,13 +13,13 @@ namespace MasterChef.Web.Controls {
     public partial class Comments {
         
         /// <summary>
-        /// ControlWrapper control.
+        /// CommentsControlWrapper control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel ControlWrapper;
+        protected global::System.Web.UI.UpdatePanel CommentsControlWrapper;
         
         /// <summary>
         /// ListViewComments control.

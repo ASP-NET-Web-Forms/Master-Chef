@@ -57,7 +57,9 @@
             this.ArticleCreatedOn.InnerText = articleData.CreatedOn.ToString("H:mm:ss - dddd dd/MM/yyyy");
             this.LikeControl.Value = articleData.Likes.Count;
             this.LikeControl.UserVote = articleData.Likes.Any(l => l.UserID == loggedUserId);
+            this.LikeControl.mustUpdate = true;
             this.CommentControl.ArticleComments = GetComments(articleData);
+            this.CommentControl.mustUpdate = true;
         }
 
         protected void LikeControl_Like(object sender, LikeEventArgs e)
@@ -89,6 +91,7 @@
             var control = sender as Likes;
             control.Value = articleData.Likes.Count;
             control.UserVote = e.LikeValue;
+            control.mustUpdate = true;
         }
 
         protected void CommentControl_Comment(object sender, CommentEventArgs e)
@@ -107,6 +110,7 @@
 
             var control = sender as Comments;
             control.ArticleComments = GetComments(articleData);
+            control.mustUpdate = true;
         }
 
         private List<CommentViewModel> GetComments(Article articleData)

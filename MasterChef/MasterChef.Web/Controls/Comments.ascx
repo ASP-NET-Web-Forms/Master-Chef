@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Comments.ascx.cs" Inherits="MasterChef.Web.Controls.Comments" %>
 
-<asp:UpdatePanel runat="server" ID="ControlWrapper">
+<asp:UpdatePanel runat="server" ID="CommentsControlWrapper">
     <ContentTemplate>
         <asp:ListView ID="ListViewComments" runat="server" ItemType="MasterChef.Web.Models.CommentViewModel">
             <ItemTemplate>
@@ -26,6 +26,8 @@
                 <asp:Label runat="server" AssociatedControlID="NewCommentTextBox" CssClass="col-md-2 control-label">Add Comment:</asp:Label>
                 <div class="col-md-8">
                     <asp:TextBox ID="NewCommentTextBox" Style="resize: vertical" BackColor="Silver" TextMode="multiline" Columns="2" Rows="3" runat="server" CssClass="form-control" />
+                    <asp:RegularExpressionValidator runat="server" ValidationExpression=".{2,200}" ControlToValidate="NewCommentTextBox"
+                        CssClass="text-danger" ErrorMessage="Comment must be between 2 and 200 characters." />
                 </div>
             </div>
             <div class="text-center col-md-12">

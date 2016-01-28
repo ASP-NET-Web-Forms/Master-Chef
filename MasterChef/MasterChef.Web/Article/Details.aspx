@@ -37,7 +37,7 @@
                 <h4><b>Like</b></h4>
             </div>
             <div class="panel-body">
-                <uc:LikeControl runat="server" ID="LikeControl" OnLike="LikeControl_Like" />
+                <uc:LikeControl runat="server" ID="LikeControl" OnLike="LikeControl_Like"/>
             </div>
         </div>
         <div class="panel panel-warning">
@@ -45,7 +45,7 @@
                 <h4><b>Comment</b></h4>
             </div>
             <div class="panel-body">
-                <uc:CommentsControl runat="server" ID="CommentControl" OnComment="CommentControl_Comment" />
+                <uc:CommentsControl runat="server" ID="CommentControl" OnComment="CommentControl_Comment"/>
             </div>
         </div>
     </asp:Panel>
