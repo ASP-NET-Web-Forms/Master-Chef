@@ -26,6 +26,8 @@ namespace MasterChef.Web.Controls
 
         public bool UserVote { get; set; }
 
+        public int RatingsCount { get; set; }
+
         public delegate void RateEventHandler(object sender, RateEventArgs e);
 
         public event RateEventHandler Rate;
@@ -99,6 +101,8 @@ namespace MasterChef.Web.Controls
                 this.ButtonPostRating.Visible = false;
                 this.UserGaveRatingTextBox.Visible = true;
             }
+
+            this.RatingsCountTextBox.Text = string.Format("{0} {1} given", this.RatingsCount, this.RatingsCount > 1 ? "Ratings" : "Rating");
         }
 
         protected void ButtonRatingAdd_Command(object sender, CommandEventArgs e)
