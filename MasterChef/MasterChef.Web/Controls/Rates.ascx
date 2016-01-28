@@ -56,7 +56,12 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <big><b><asp:TextBox Enabled="false" runat="server" ID="UserGaveRatingTextBox" CssClass="text-center" Text="You already gave rating!" Visible="false" /></b></big>
+                    <asp:TextBox runat="server" ID="RatingsCountTextBox" CssClass="text-center" Enabled="false" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <big><b><asp:TextBox Enabled="false" runat="server" ID="UserGaveRatingTextBox" CssClass="text-center" Text="Recipe Rated!" Visible="false" /></b></big>
                     <asp:DropDownList ID="GiveRatingDropDown"
                         CssClass="text-center" Font-Size="Large" runat="server">
                         <asp:ListItem Value="5"> 5 </asp:ListItem>

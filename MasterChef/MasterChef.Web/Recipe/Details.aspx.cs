@@ -81,6 +81,7 @@ namespace MasterChef.Web.Recipe
 
             this.RateControl.Value = Convert.ToInt32(Math.Ceiling(recipeRating));
             this.RateControl.UserVote = recipeData.Ratings.Any(l => l.UserID == this.loggedUserId);
+            this.RateControl.RatingsCount = recipeData.Ratings.Count;
             this.RateControl.mustUpdate = true;
         }
 
@@ -139,6 +140,7 @@ namespace MasterChef.Web.Recipe
 
             this.RateControl.Value = Convert.ToInt32(Math.Ceiling(recipeRating));
             this.RateControl.UserVote = true;
+            this.RateControl.RatingsCount = recipeData.Ratings.Count;
             this.RateControl.mustUpdate = true;
         }
     }

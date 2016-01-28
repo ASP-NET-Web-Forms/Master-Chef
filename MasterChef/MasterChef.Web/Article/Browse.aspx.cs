@@ -56,6 +56,8 @@
                 Session["OrderType"] = this.OrderType.SelectedValue;
             }
 
+            //Session.Timeout = 8; // MSDN: Most Web administrators set this property to 8 minutes. :D
+
             var orderBy = (string)Session["OrderBy"];
             var orderType = (string)Session["OrderType"];
 

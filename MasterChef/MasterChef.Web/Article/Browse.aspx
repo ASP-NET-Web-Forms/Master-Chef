@@ -17,7 +17,7 @@
                                         AutoPostBack="true"
                                         OnSelectedIndexChanged="GetFilteredArticles"
                                         CssClass="form-control" runat="server">
-                                        <asp:ListItem Selected="True" Value="desc"> Descending </asp:ListItem>
+                                        <asp:ListItem Value="desc"> Descending </asp:ListItem>
                                         <asp:ListItem Value="asc"> Ascending </asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
@@ -31,7 +31,7 @@
                                         AutoPostBack="true"
                                         OnSelectedIndexChanged="GetFilteredArticles"
                                         CssClass="form-control" runat="server">
-                                        <asp:ListItem Selected="True" Value="createdOn"> Date </asp:ListItem>
+                                        <asp:ListItem Value="createdOn"> Date </asp:ListItem>
                                         <asp:ListItem Value="likes"> Likes </asp:ListItem>
                                         <asp:ListItem Value="title"> Title </asp:ListItem>
                                         <asp:ListItem Value="username"> Creator </asp:ListItem>
