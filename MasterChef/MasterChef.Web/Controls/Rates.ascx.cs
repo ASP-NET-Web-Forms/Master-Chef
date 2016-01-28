@@ -102,7 +102,7 @@ namespace MasterChef.Web.Controls
                 this.UserGaveRatingTextBox.Visible = true;
             }
 
-            this.RatingsCountTextBox.Text = string.Format("{0} Rates given", this.RatingsCount);
+            this.RatingsCountTextBox.Text = string.Format("{0} {1} given", this.RatingsCount, this.RatingsCount > 1 ? "Ratings" : "Rating");
         }
 
         protected void ButtonRatingAdd_Command(object sender, CommandEventArgs e)

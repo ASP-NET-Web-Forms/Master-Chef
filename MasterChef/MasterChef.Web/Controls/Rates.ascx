@@ -59,6 +59,7 @@
                     <asp:TextBox runat="server" ID="RatingsCountTextBox" CssClass="text-center" Enabled="false" />
                 </div>
             </div>
+            <br />
             <div class="row">
                 <div class="col-md-12">
                     <big><b><asp:TextBox Enabled="false" runat="server" ID="UserGaveRatingTextBox" CssClass="text-center" Text="Recipe Rated!" Visible="false" /></b></big>
