@@ -17,8 +17,6 @@
     {
         public int Value { get; set; }
 
-        public int DataID { get; set; }
-
         public bool UserVote { get; set; }
 
         public delegate void LikeEventHandler(object sender, LikeEventArgs e);

@@ -7,135 +7,99 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MasterChef.Web.Recipe {
+namespace MasterChef.Web.Controls {
     
     
-    public partial class Details {
+    public partial class Rates {
         
         /// <summary>
-        /// ArticleInfoPanel control.
+        /// RatesControlWrapper control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel ArticleInfoPanel;
+        protected global::System.Web.UI.UpdatePanel RatesControlWrapper;
         
         /// <summary>
-        /// ArticleTitle control.
+        /// StarHolder5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ArticleTitle;
+        protected global::System.Web.UI.WebControls.PlaceHolder StarHolder5;
         
         /// <summary>
-        /// ArticleImage control.
+        /// StarHolder4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ArticleImage;
+        protected global::System.Web.UI.WebControls.PlaceHolder StarHolder4;
         
         /// <summary>
-        /// isHotDish control.
+        /// StarHolder3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label isHotDish;
+        protected global::System.Web.UI.WebControls.PlaceHolder StarHolder3;
         
         /// <summary>
-        /// isColdDish control.
+        /// StarHolder2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label isColdDish;
+        protected global::System.Web.UI.WebControls.PlaceHolder StarHolder2;
         
         /// <summary>
-        /// isSweetDish control.
+        /// StarHolder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label isSweetDish;
+        protected global::System.Web.UI.WebControls.PlaceHolder StarHolder1;
         
         /// <summary>
-        /// isVegetarianDish control.
+        /// StarHolder0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label isVegetarianDish;
+        protected global::System.Web.UI.WebControls.PlaceHolder StarHolder0;
         
         /// <summary>
-        /// ArticleContent control.
+        /// UserGaveRatingTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ArticleContent;
+        protected global::System.Web.UI.WebControls.TextBox UserGaveRatingTextBox;
         
         /// <summary>
-        /// IngredientsList control.
+        /// GiveRatingDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater IngredientsList;
+        protected global::System.Web.UI.WebControls.DropDownList GiveRatingDropDown;
         
         /// <summary>
-        /// ArticleCreatorLink control.
+        /// ButtonPostRating control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor ArticleCreatorLink;
-        
-        /// <summary>
-        /// ArticleCreatorName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ArticleCreatorName;
-        
-        /// <summary>
-        /// ArticleCreatedOn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ArticleCreatedOn;
-        
-        /// <summary>
-        /// LikeControl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MasterChef.Web.Controls.Likes LikeControl;
-        
-        /// <summary>
-        /// RateControl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MasterChef.Web.Controls.Rates RateControl;
+        protected global::System.Web.UI.WebControls.Button ButtonPostRating;
     }
 }

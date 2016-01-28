@@ -192,10 +192,10 @@
     <Content Include="Content\themes\bootstrap.paper.css" />
     <Content Include="Content\themes\bootstrap.paper.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\themes\odometer-theme-train-station.css" />
     <Content Include="Controls\Comments.ascx" />
     <Content Include="Controls\FileUpload.ascx" />
     <Content Include="Controls\Likes.ascx" />
+    <Content Include="Controls\Rates.ascx" />
     <Content Include="Error\403.aspx" />
     <Content Include="Error\403.gif" />
     <Content Include="Controls\NewestArticles.ascx" />
@@ -581,6 +581,12 @@
     </Compile>
     <Compile Include="Controls\NewestArticles.ascx.designer.cs">
       <DependentUpon>NewestArticles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Rates.ascx.cs">
+      <DependentUpon>Rates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Rates.ascx.designer.cs">
+      <DependentUpon>Rates.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

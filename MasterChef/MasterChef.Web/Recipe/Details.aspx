@@ -1,4 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="MasterChef.Web.Recipe.Details" %>
+﻿<%@ Page Title="Recipe Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="MasterChef.Web.Recipe.Details" %>
+
+<%@ Register Src="~/Controls/Likes.ascx" TagPrefix="uc" TagName="LikeControl" %>
+<%@ Register Src="~/Controls/Rates.ascx" TagPrefix="uc" TagName="RateControl" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Panel runat="server" CssClass="row panel panel-danger" ID="ArticleInfoPanel">
@@ -48,7 +51,21 @@
                 </div>
             </div>
         </div>
-
     </asp:Panel>
-
+    <div class="panel panel-success">
+        <div class="panel-heading text-center">
+            <h4><b>Like</b></h4>
+        </div>
+        <div class="panel-body">
+            <uc:LikeControl runat="server" ID="LikeControl" OnLike="LikeControl_Like" />
+        </div>
+    </div>
+    <div class="panel panel-danger">
+        <div class="panel-heading text-center">
+            <h4><b>Rate</b></h4>
+        </div>
+        <div class="panel-body">
+            <uc:RateControl runat="server" ID="RateControl" OnRate="RateControl_Rate" />
+        </div>
+    </div>
 </asp:Content>

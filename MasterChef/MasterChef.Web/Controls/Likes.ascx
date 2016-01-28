@@ -4,7 +4,7 @@
     <ContentTemplate>
         <div class="text-center">
             <div class="row">
-                <asp:Label runat="server" ID="LabelValue" CssClass="odometer" />
+                <asp:Label runat="server" ID="LabelValue" CssClass="likes-count" />
             </div>
             <div class="row">
                 <asp:LinkButton runat="server" ID="ButtonLike" CssClass="btn btn-success glyphicon glyphicon-thumbs-up" CommandName="Like" OnCommand="ButtonLike_Command" Text=" Like" />

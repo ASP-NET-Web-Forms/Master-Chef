@@ -122,3 +122,12 @@ input[type="select"] {
 .tag-recipe {
     margin-right: 3px !important;
 }
+
+.likes-count {
+    font-family: PMingLiU-ExtB;
+    font-size: 55px;
+}
+
+.rate-star {
+    font-size: 55px;
+}

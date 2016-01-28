@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Browse.aspx.cs" Inherits="MasterChef.Web.Recipe.Browse" %>
+﻿<%@ Page Title="Browse Recipes" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Browse.aspx.cs" Inherits="MasterChef.Web.Recipe.Browse" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <asp:UpdatePanel ID="UpdatePanelRecipe" runat="server">
@@ -58,7 +58,7 @@
                         </ItemTemplate>
                     </asp:ListView>
                     <asp:Panel CssClass="row" runat="server" ID="DataPagingPanel">
-                        <div class="col-md-3 col-xs-offset-5">
+                        <div class="text-center">
                             <asp:DataPager ID="DataPager" runat="server" PageSize="8" QueryStringField="page" PagedControlID="ListViewRecipes">
                                 <Fields>
                                     <asp:NextPreviousPagerField ButtonCssClass="btn btn-default" ShowFirstPageButton="true" ShowNextPageButton="false" ShowPreviousPageButton="false" />

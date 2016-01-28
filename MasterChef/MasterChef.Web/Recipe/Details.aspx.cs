@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MasterChef.Models.Recipe;
+using MasterChef.Web.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -67,15 +69,77 @@ namespace MasterChef.Web.Recipe
             this.IngredientsList.DataSource = recipeData.Ingredients;
             this.IngredientsList.DataBind();
 
-            //this.ListViewUsers.DataSource = articleData.UsersEvents
-            //    .Select(userEvents => new JoinedUsersViewModel
-            //    {
-            //        UserName = userEvents.User.UserName,
-            //        ID = userEvents.User.Id,
-            //        Image = userEvents.User.Image
-            //    });
+            this.LikeControl.Value = recipeData.Likes.Count;
+            this.LikeControl.UserVote = recipeData.Likes.Any(l => l.UserID == this.loggedUserId);
+            this.LikeControl.mustUpdate = true;
 
-            //this.ListViewUsers.DataBind();
+            var recipeRating = 0.0;
+            if (recipeData.Ratings.Count > 0)
+            {
+                recipeRating = (double)recipeData.Ratings.Sum(r => r.Rating) / recipeData.Ratings.Count;
+            }
+
+            this.RateControl.Value = Convert.ToInt32(Math.Ceiling(recipeRating));
+            this.RateControl.UserVote = recipeData.Ratings.Any(l => l.UserID == this.loggedUserId);
+            this.RateControl.mustUpdate = true;
+        }
+
+        protected void LikeControl_Like(object sender, LikeEventArgs e)
+        {
+            var recipeData = this.data.Recipes.Find(recipeId);
+            if (e.LikeValue)
+            {
+                RecipeLike like = new RecipeLike()
+                {
+                    RecipeID = recipeId,
+                    UserID = this.loggedUserId
+                };
+
+                this.data.RecipeLikes.Add(like);
+            }
+            else
+            {
+                var currentUserLike = recipeData.Likes.FirstOrDefault(l => l.UserID == this.loggedUserId);
+                if (currentUserLike == null)
+                {
+                    return;
+                }
+
+                this.data.RecipeLikes.Delete(currentUserLike);
+            }
+
+            this.data.SaveChanges();
+
+            var control = sender as Likes;
+            control.Value = recipeData.Likes.Count;
+            control.UserVote = e.LikeValue;
+            control.mustUpdate = true;
+        }
+
+        protected void RateControl_Rate(object sender, RateEventArgs e)
+        {
+            var recipeData = this.data.Recipes.Find(recipeId);
+            RecipeRating rating = new RecipeRating()
+            {
+                RecipeID = recipeId,
+                UserID = this.loggedUserId,
+                Rating = e.RateValue,
+                RatedOn = DateTime.Now
+            };
+
+            this.data.RecipeRatings.Add(rating);
+            this.data.SaveChanges();
+
+            var control = sender as Rates;
+            var recipeRating = 0.0;
+            if (recipeData.Ratings.Count > 0)
+            {
+                recipeRating = (double)recipeData.Ratings.Sum(r => r.Rating) / recipeData.Ratings.Count;
+            }
+
+            this.RateControl.Value = Convert.ToInt32(Math.Ceiling(recipeRating));
+            this.RateControl.UserVote = true;
+            this.RateControl.mustUpdate = true;
         }
     }
 }

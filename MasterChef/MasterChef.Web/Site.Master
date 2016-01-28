@@ -13,7 +13,6 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <webopt:BundleReference runat="server" Path="~/Content/theme" />
     <link href="~/MasterChefSiteLogo.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="Content/themes/odometer-theme-train-station.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -104,7 +103,7 @@
         <div class="container body-content">
             <asp:Panel ID="panelSiteMapPath" runat="server">
 				<br />
-                <asp:SiteMapPath ID="SiteMapPath" SiteMapProvider="secureProvider" runat="server"></asp:SiteMapPath>		
+                <asp:SiteMapPath ID="SiteMapPath" SiteMapProvider="secureProvider" runat="server" CssClass="breadcrumb" />		
 				<br />
 				<br />
 			</asp:Panel>
