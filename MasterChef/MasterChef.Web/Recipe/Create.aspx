@@ -30,11 +30,9 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="RecipeDescription" CssClass="col-md-2 control-label">How to prepare</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox ID="RecipeDescription" style="resize: vertical" TextMode="multiline" Columns="30" Rows="7" runat="server" CssClass="form-control" />
+                <asp:TextBox ID="RecipeDescription" style="resize: vertical" TextMode="multiline" Columns="30" Rows="5" runat="server" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="RecipeDescription"
                     CssClass="text-danger" ErrorMessage="The description field is required." />
-                <asp:RegularExpressionValidator runat="server" ValidationExpression=".{3,1000}" ControlToValidate="RecipeDescription"
-                    CssClass="text-danger" ErrorMessage="Description must be between 3 and 1000 characters."/>
             </div>
         </div>
         <div class="form-group">
