@@ -63,17 +63,24 @@ namespace MasterChef.Web.Account
                 this.data.Images.Add(image);
                 user.Image = image;
             }
-
-            IdentityResult result = manager.Create(user, Password.Text);
-            if (result.Succeeded)
+            
+            try
             {
-                manager.AddToRole(user.Id, "user");
-                IdentityHelper.SignIn(manager, user, isPersistent: false);
-                IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                IdentityResult result = manager.Create(user, Password.Text);
+                if (result.Succeeded)
+                {
+                    manager.AddToRole(user.Id, "user");
+                    IdentityHelper.SignIn(manager, user, isPersistent: false);
+                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                }
+                else
+                {
+                    ErrorMessage.Text = result.Errors.FirstOrDefault();
+                }
             }
-            else 
+            catch (System.Data.Entity.Validation.DbEntityValidationException error)
             {
-                ErrorMessage.Text = result.Errors.FirstOrDefault();
+                ErrorMessage.Text = error.EntityValidationErrors.FirstOrDefault().ValidationErrors.FirstOrDefault().ErrorMessage;
             }
         }
 
