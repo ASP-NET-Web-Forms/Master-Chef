@@ -17,26 +17,8 @@ namespace MasterChef.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var dbContext = new MasterChefDbContext();
-            this.data = new MasterChefData(dbContext);
-            var allArticles = this.data.Articles.All();
-
             Master.FindControl("panelSiteMapPath").Visible = false;
-
-            this.UserControlNewestArticles.NewestArticlesList.DataSource = allArticles
-                .OrderByDescending(article => article.CreatedOn)
-                .Take(3)
-                .Select(x => new HomeNewestArticlesViewModel
-                {
-                    ID = x.ID,
-                    Title = x.Title,
-                    ImagePath = x.Image.Path,
-                    Comments = x.Comments.Count,
-                    Likes = x.Likes.Count
-                })
-                .ToList();
-
-            this.UserControlNewestArticles.NewestArticlesList.DataBind();
+            
         }
     }
 }

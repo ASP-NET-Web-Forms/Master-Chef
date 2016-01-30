@@ -1,6 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NewestArticles.ascx.cs" Inherits="MasterChef.Web.Controls.NewestArticles" %>
+<%@ OutputCache Duration="200" VaryByParam="None" %>
 <div class="row">
-    <asp:ListView ID="ListViewNewestArticles" runat="server" ItemType="MasterChef.Web.Models.HomeNewestArticlesViewModel">
+    <asp:ListView ID="ListViewNewestArticles" runat="server" ItemType="MasterChef.Web.Models.HomeNewestArticlesViewModel"
+        SelectMethod="ListViewNewestArticles_GetData">
         <ItemTemplate>
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <a href="<%#: ResolveUrl("~/Article/Details?Id="+Item.ID) %>" class="thumbnail thumbnail-height">

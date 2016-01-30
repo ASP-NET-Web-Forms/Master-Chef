@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MasterChef.Data;
+using MasterChef.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,6 +21,28 @@ namespace MasterChef.Web.Controls
         {
             this.NewestArticlesList = ListViewNewestArticles;
             
+        }
+
+        public IQueryable<HomeNewestArticlesViewModel> ListViewNewestArticles_GetData()
+        {
+            var dbContext = new MasterChefDbContext();
+            var data = new MasterChefData(dbContext);
+
+            var allArticles = data.Articles.All().ToList();
+            var result = allArticles
+                .OrderByDescending(article => article.CreatedOn)
+                .Take(3)
+                .Select(x => new HomeNewestArticlesViewModel
+                {
+                    ID = x.ID,
+                    Title = x.Title,
+                    ImagePath = x.Image.Path,
+                    Comments = x.Comments.Count,
+                    Likes = x.Likes.Count
+                })
+                .AsQueryable();
+
+            return result;
         }
     }
 }
