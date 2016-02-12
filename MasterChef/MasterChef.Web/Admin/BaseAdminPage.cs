@@ -31,6 +31,10 @@
                     HttpContext.Current.Response.Redirect("~/Error/403");
                 }
             }
+            else
+            {
+                Response.Redirect("~/");
+            }
         }
 
         protected void dataSource_ContextCreating(object sender, Microsoft.AspNet.EntityDataSource.EntityDataSourceContextCreatingEventArgs e)

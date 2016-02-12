@@ -63,24 +63,24 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <p class="truncate additional-beer-info">
+                                            <p class="truncate">
                                                 <big class="text-success"><b>Creator: <a href="<%#: ResolveUrl("~/User/Details?Id="+Item.CreatorID) %>"><%#: Item.Creator %></a></b></big>
                                             </p>
                                         </div>
                                         <div class="col-md-6 text-right">
-                                            <p class="truncate additional-beer-info">
+                                            <p class="truncate">
                                                 <big><b class="text-success"><%#: Item.Likes %> Likes</b></big>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <p class="truncate additional-beer-info">
+                                            <p class="truncate">
                                                 <big class="text-success"><b>Created On: <%#: Item.CreatedOn %></b> </big>
                                             </p>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="additional-beer-info">
+                                            <div>
                                                 <p class="truncate text-right">
                                                     <big><b class="text-success"><%#: Item.Comments %> Comments</b></big>
                                                 </p>
